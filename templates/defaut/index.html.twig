@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} BRIDGE SMS
+{#
+<!-- {{ controller_name }}! -->#}
+{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px/1.5 sans-serif;
+    }
+
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>BRIDGE SMS </h1>
+
+    Application de diffusion des SMS
+    {# <ul>
+        <li>Envoyer des SMS à vos clients , partout dans le monde entier</code></li>
+    </ul> #}
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+
+<style>
+    #bcorps {
+        background-image: url("{{ asset('images/sms3.jpg') }}");
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+{% endblock stylesheets %}

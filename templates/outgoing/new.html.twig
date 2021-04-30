@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Outgoing{% endblock %}
+
+{% block body %}
+    <h1>Create new Outgoing</h1>
+
+    {{ include('outgoing/_form.html.twig') }}
+
+    <a href="{{ path('outgoing_index') }}">back to list</a>
+{% endblock %}

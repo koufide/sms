@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% if title is defined %}
+        {{title}}{% else %}Title
+        {% endif %}
+        | VIREPREL
+        {% endblock %}
+    </title>
+    {% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+    <!-- Renders a link tag (if your module requires any CSS) <link rel="stylesheet" src="/build/app.css"> -->
+    {% endblock %}
+</head>
+
+<body>
+    {#
+                                        <!-- <div id="app"></div>
+                                                            <div id="app2"></div> -->
+                                        <!-- app --> #}
+    {% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+        <a class="navbar-brand" href="{{ path('index') }}">
+            <img alt="Brand" src="{{ asset('images/BRIDGE.png') }}" width='50%'></a>
+        </a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse  collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {# <li class="nav-item active">
+                                                                                                            <a class="nav-link" href="{{ path('index') }}">
+                                                                                                                <i class="fa fa-home" aria-hidden="true"></i> Home
+                                                                                                                <span class="sr-only">(current)</span>
+                                                                                                            </a>
+                                                                                                        </li> #}
+                <li class="nav-item">
+                    <a class="nav-link" href="#" title="Télécharger">
+                        <i aria-hidden="true" class="fa fa-book"></i>
+                        Guide</a>
+                </li>
+                {% if is_granted('ROLE_USER') %}
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        <i aria-hidden="true" class="fa fa-user"></i>
+                        {# {{app.user.username|capitalize}} #}
+                        {{app.user.displayname}}
+                    </a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-key    "></i>
+                            Mot de passe</a>
+                        <!-- <a class="dropdown-item" href="#">Another action</a> //-->
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ path('app_logout') }}">
+                            <i aria-hidden="true" class="fa fa-sign-out-alt"></i>
+                            Déconnexion</a>
+                    </div>
+                </li>
+                {% else %}
+                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                </li>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    {% endblock nav %}
+    <!-- nav -->
+    {% block bmilieu %}
+    <div class="container-fluid mt-3" id="bmilieu">
+        <div class="row">
+            <div class="col-2 mt-2" id="leftmenu">
+                {% block leftmenu %}
+                <div id="accordion">
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <!--param-->
+                    <div class="card">
+                        <!--parametres-->
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link"
+                                    data-target="#collapseOne" data-toggle="collapse">
+                                    <!-- <i class="fa fa-cog" aria-hidden="true"></i>-->
+                                    <i aria-hidden="true" class="fa fa-cog"></i>
+                                    Paramètres
+                                </button>
+                            </h5>
+                        </div>
+                         {# <div aria-labelledby="headingOne" class="panel-collapse
+                                    {{ (in_param is defined ) ? 'show':'collapse'  }}" id="collapseOne">
+                                        <div class="panel-body">
+                                    <table class="table">
+                                                <tr>
+                                                    <td>
+                                                        <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                                        <a href="{{ path('compte_index') }}">Comptes</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>   #}
+                    </div>
+                    <!--Paramètres-->
+                    <div class="card">
+                        <!--parametres-->
+                        <div class="card-header" id="headingHabili">
+                            <h5 class="mb-0">
+                                <button aria-controls="collapseHabili" aria-expanded="true" class="btn btn-link"
+                                    data-target="#collapseHabili" data-toggle="collapse">
+                                    <!-- <i class="fa fa-cog" aria-hidden="true"></i>-->
+                                    <i aria-hidden="true" class="fa fa-clone"></i>
+                                    Habilitations
+                                </button>
+                            </h5>
+                        </div>
+                        <div aria-labelledby="headingHabili"
+                            class="panel-collapse {{ (in_habili is defined ) ? 'show':'collapse'  }}"
+                            id="collapseHabili">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                            <a href="{{ path('user_index') }}">Utilisateurs</a>
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                                                                                                                                                                                                                                <td>
+                                                                                                                                                                                                                                                    <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                                                                                                                                                                                                                                    <a href="#">Applications</a>
+                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                            </tr> -->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- statistique-->
+                    <div class="card">
+                        <div class="card-header" id="heading4">
+                            <h5 class="mb-0">
+                                <button aria-controls="collapse4" aria-expanded="false" class="btn btn-link collapsed"
+                                    data-target="#collapse4" data-toggle="collapse">
+                                    {#
+                                                                                                                                                                                                                                            <!-- <i class="fas fa-mail-bulk"></i>--> #}
+                                    <i aria-hidden="true" class="fa fa-chart-bar"></i>
+                                    Statistiques
+                                </button>
+                            </h5>
+                        </div>
+                        <div aria-labelledby="heading4" class="{{ (in_statistique is defined ) ? 'show':'collapse' }}"
+                            data-parent="#accordion" id="collapse4">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="#">Encours</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">Mensuel</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- statistique-->
+                    <!--habilitations-->
+                    {% endif %}
+                    {% if is_granted('ROLE_SOS_DRP') %}
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link"
+                                    data-target="#collapseTwo" data-toggle="collapse">
+                                    <!-- <i class="fa fa-cog" aria-hidden="true"></i>-->
+                                    <!--<i class="fa fa-users-cog" aria-hidden="true"></i> --><i aria-hidden="true"
+                                        class="fa fa-user-plus"> </i>
+                                    Abonnement
+                                </button>
+                            </h5>
+                        </div>
+                        <div aria-labelledby="headingTwo"
+                            class="panel-collapse {{ (in_abonnement is defined ) ? 'show':'collapse'  }}"
+                            id="collapseTwo">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                            <a href="{{ path('abonnement_list') }}">Liste</a>
+                                            <i><small><span id="nbre_abonne"></span></small></i>
+                                        </td>
+                                    </tr>
+                                    {# <tr>
+                                        <td>
+                                            <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                            <a href="{{ path('abonnement_index') }}">Ajouter</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="glyphicon glyphicon-flash text-success"></span>
+                                            <a href="#">Résilier</a>
+                                        </td>
+                                    </tr> #}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- users //-->
+                    {% endif %}
+                    {% if is_granted('ROLE_MARKETING') %}
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button aria-controls="collapseThree" aria-expanded="false"
+                                    class="btn btn-link collapsed" data-target="#collapseThree" data-toggle="collapse">
+                                    <i class="fas fa-mail-bulk    "></i>
+                                    Message
+                                </button>
+                            </h5>
+                        </div>
+                        <div aria-labelledby="headingThree" class="{{ (in_message is defined ) ? 'show':'collapse' }}"
+                            data-parent="#accordion" id="collapseThree">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="{{ path('message_index')}}">Publier</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="{{ path('message_new_file')}}">Diffusion / File</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="{{ path('outgoing_index')}}">Logs</a>
+                                            <!-- <span class="label label-info">5</span> -->
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                                                                                                                                                                                                                                <td>
+                                                                                                                                                                                                                                                    <a href="#">Consultation</a>
+                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                            </tr> -->
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- message-->
+                    {% endif %}
+                </div>
+                <!-- acordeon-->
+            </div>
+            <!-- leftmenu //-->
+            {% endblock leftmenu %}
+            <!-- col-2 -->
+            <!-- <div class="p-1"> -->
+            <!--corps-->
+            {% block bcorps %}
+            <div class="col-10 pt-2" id="bcorps">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            {# <i class="fa fa-envelope" aria-hidden="true"></i> #}
+                            <a href="{{ path('index') }}">Home</a>
+                        </li>
+                        {% block breadcrumb %}
+                        {# <li class="breadcrumb-item active"><a href="{{ path('fichier_index') }}">Fichier</a></li>
+                                                                                                                                                                                #}
+                        {% endblock breadcrumb %}
+                    </ol>
+                </nav>
+                {% block bmessage %}
+                {% for type, messages in app.session.flashbag.all() %}
+                {% for message in messages %}
+                {# {% if type == 'error' %} #}
+                {# {{type}} #}
+                <div class="alert {{type}} alert-dismissible fade show" role="alert"> <strong>
+                        <i aria-hidden="true" class="fa fa-angle-double-right"></i>
+                    </strong>
+                    {{message}}
+                    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {# {% endif %} #}
+                {# Or even with css class rendering:
+                                                                                                                                                                        <div class="flash-{{type}}">{{message}}</div>
+                                                                                                                                                                        #}
+                {% endfor %}
+                {% endfor %}
+                {% endblock bmessage %}
+                <div class="p-1">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+            {% endblock bcorps %}
+            <!-- </div>corps -->
+            <!-- col-10 -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container-fluid -->
+    {% endblock bmilieu %}
+    <!-- col-6 -->
+    {#
+                            <script src=" {{ asset('../assets/js/app.js')}} "></script>
+                            #}
+    {% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {# {{ encore_entry_script_tags('main') }} #}
+    {#
+                                            <script src="{{ asset('build/app.js') }}"></script> #}
+    <!-- Renders app.js & a webpack runtime.js file <script src="/build/runtime.js"></script> <script src="/build/app.js"></script> -->
+    {% endblock %}
+</body>
+
+</html>

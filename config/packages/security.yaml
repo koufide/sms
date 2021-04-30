@@ -1,0 +1,94 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+            # cost: 12
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        in_memory: { memory: ~ }
+        in_database:
+            entity:
+                class: App\Entity\User
+                property: username
+        # my_ldap:
+        #     ldap:
+        #         service: Symfony\Component\Ldap\Ldap
+        #         base_dn: DC=koufide,DC=com
+        #         search_dn: "CN=Administrateur,CN=Users,DC=koufide,DC=com"
+        #         #search_dn: "CN=Users,DC=koufide,DC=com"
+        #         search_password: Admin123
+        #         #default_roles: ROLE_USER
+        #         uid_key: sAMAccountName
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            provider: in_database
+            
+            # form_login:
+            #     login_path: security_login
+            #     check_path: security_login
+            
+            logout:
+                path:  app_logout
+                # target: index
+            
+            # http_basic_ldap:
+                # service: Symfony\Component\Ldap\Ldap
+                # dn_string: 'sAMAccountName={username},dc=koufide,dc=com'
+            
+            # form_login_ldap:
+            #     provider: my_ldap
+            #     login_path: security_login
+            #     check_path: ldap_login
+            #     service: Symfony\Component\Ldap\Ldap
+            #     #dn_string: 'uid={username},CN=Users,DC=koufide,DC=com'
+            #     dn_string: 'DC=koufide,DC=com'
+            #     #dn_string: 'CN=Administrateur,CN=Users,DC=koufide,DC=com'
+            #     # dn_string: 'CN={username},CN=Users,DC=koufide,DC=com'
+            #     query_string: '(&(objectCategory=person)(objectClass=user)(sAMAccountName={username})(!(userAccountControl:1.2.840.113556.1.4.803:=2)))'
+                
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+            
+            remember_me:
+                secret:   '%kernel.secret%'
+                lifetime: 604800 # 1 week in seconds
+                path:     /
+                # by default, the feature is enabled by checking a
+                # checkbox in the login form (see below), uncomment the
+                # following line to always enable it.
+                #always_remember_me: true
+
+                
+
+            # activate different ways to authenticate
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: true
+            # https://symfony.com/doc/current/security/form_login_setup.html
+
+    role_hierarchy:
+        ROLE_SOS_DRP:   ROLE_USER
+        ROLE_CLIENT:   ROLE_USER
+        ROLE_RM:   ROLE_USER
+        ROLE_MARKETING:    ROLE_USER
+        ROLE_SUP_MARKETING:   ROLE_MARKETING
+        ROLE_ADMIN: [ROLE_USER , ROLE_MARKETING,  ROLE_SUP_MARKETING, ROLE_RM, ROLE_CLIENT, ROLE_SOS_DRP]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+    
+    
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        #  - { path: ^/fichier, roles: ROLE_USER }
+        # - { path: ^/member, roles: ROLE_USER }
+        # - { path: ^/profile, roles: ROLE_USER }

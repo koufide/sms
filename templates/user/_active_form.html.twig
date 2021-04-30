@@ -1,0 +1,13 @@
+<form method="post" action="{{ path('user_active', {'id': user.id}) }}" style="display:inline">
+    <input type="hidden" name="_method" value="POST">
+    <input type="hidden" name="_token" value="{{ csrf_token('post' ~ user.id) }}">
+    <button class="btn btn-outline-danger">
+        {% if user.isActive %}
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        Désactiver
+        {% else %}
+        <i class="fa fa-unlock" aria-hidden="true"></i>
+        Activer
+        {% endif %}
+    </button>
+</form>

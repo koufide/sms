@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parametre>
+
+    <serveur_mysql>
+        <adr>localhost</adr>
+        <uti>root</uti>
+        <mdp>iexploit</mdp>
+        <bd>sms</bd>
+        <!-- <table>Compte</table> -->
+        <table>
+            <Compte>compte</Compte>
+            <Maofil>maofil</Maofil>
+            <Abonnement>abonnement</Abonnement>
+        </table>
+    </serveur_mysql>
+
+    <serveur>
+        <adr>192.168.202.100</adr>
+        <uti>cgbtst</uti>
+        <mdp>ivoire16</mdp>
+        <vue>
+            <Maofil>BBG_V_VIREPREL_MAOFIL</Maofil>
+            <Compte>BBG_V_COMPTE_SMS</Compte>
+        </vue>
+    </serveur>
+
+    <bd>
+        <cgbtst>cgbtst</cgbtst>
+    </bd>
+    <tnsname>
+        <cgbtst>(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.202.100)(PORT = 1521)))(CONNECT_DATA=(SID = EXP)))</cgbtst>
+    </tnsname>
+
+    <sms>
+        <user>cgb</user>
+        <mdp>H22F6VMI</mdp>
+    </sms>
+
+
+    <!-- <serveur>
+        <adr>192.168.1.10</adr>
+        <uti>scott</uti>
+        <mdp>test</mdp>
+        <vue>
+            <Maofil>BBG_V_VIREPREL_MAOFIL</Maofil>
+            <Compte>BBG_V_VIREPREL_CPT</Compte>
+        </vue>
+    </serveur>
+    <bd>
+        <cgbtst>scott</cgbtst>
+    </bd>
+
+    <tnsname>
+        <cgbtst>(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.10)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = DB11G.srvoracle.koufide.com) ) )</cgbtst>
+    </tnsname> -->
+
+
+
+
+    <!-- <ldap> 
+        <ldapserver>192.168.200.100</ldapserver>
+        <ldapport>389</ldapport>
+        <ldapdomain>bridgebankgroup.com</ldapdomain>
+        <ldapuser>Administrator</ldapuser>
+        <ldappass>Vfstab852</ldappass>
+        <ldaptree>DC=bridgebankgroup,DC=com</ldaptree>
+        <filtre>(&amp; (objectCategory=person)(objectClass=user) (samaccountname=*.*) (mail=*@bridgebankgroup.com) (! (userAccountControl:1.2.840.113556.1.4.803:=2)) )</filtre>
+        <attribute></attribute>
+    </ldap> -->
+
+    <reps>
+        <log_rep>/var/www/html/sms/api/log/</log_rep>
+        <api_rep>/var/www/html/sms/api/</api_rep>
+        <ftp_outgoing>/home/ftpuser/ftp/outgoing/</ftp_outgoing>
+        <!-- <arch_outgoing>/var/www/html/sms/public/arch_outgoing/</arch_outgoing> -->
+        <arch_outgoing>/home/iexploit/outgoing/</arch_outgoing>
+    </reps>
+
+    <files>
+        <file1>loadcompte.log</file1>
+        <!-- <file_abonnesms>test_bridgesms_prod.txt</file_abonnesms> -->
+        <!-- <file_abonnesms>bridgesms_prod_abonne.txt</file_abonnesms> -->
+        <file_abonnesms>SMS_ABONNE_DESABONNE_</file_abonnesms>
+        <file_lock_push_sms>lock_push_sms.run</file_lock_push_sms>
+        <file_lock_mpush_sms>lock_mpush_sms.run</file_lock_mpush_sms>
+        <file_lock_mpush_sms2>lock_mpush_sms2.run</file_lock_mpush_sms2>
+        <file_lock_mpush_sms3>lock_mpush_sms3.run</file_lock_mpush_sms3>
+        <file_lock_mpush_sms4>lock_mpush_sms4.run</file_lock_mpush_sms4>
+        <file_lock_dpush_sms>lock_dpush_sms.run</file_lock_dpush_sms>
+        <file_lock_charge_sms>lock_charge_sms.run</file_lock_charge_sms>
+        <file_alert_log>alert.log</file_alert_log>
+        <file_createuti_log>createuti.log</file_createuti_log>
+    </files>
+    <messages>
+        <!-- <abonnne>VOTRE SOUSCRIPTION AU SERVICE BRIDGE SMS POUR LE COMPTE  [ACCOUNT] A ETE ACTIVEE. VOTRE CODE SECRET EST:  [SECRET]ENVOYEZ VOS REQUETES PULL AU N°06859594.</abonnne> -->
+        <abonnement>VOTRE SOUSCRIPTION AU SERVICE BRIDGE SMS POUR LE COMPTE  [ACCOUNT] A ETE ACTIVEE.</abonnement>
+        <!-- <renitialisation>LE CODE SECRET DE VOTRE COMPTE  [ACCOUNT] DU SERVICE BRIDGE SMS A ETE REINITIALISE.VOTRE NOUVEAU CODE SECRET EST:  [SECRET]. ENVOYEZ VOS REQUETES PULL AU  N°06859594.</renitialisation> -->
+        <renitialisation>LE CODE SECRET DE VOTRE COMPTE  [ACCOUNT] DU SERVICE BRIDGE SMS A ETE REINITIALISE.VOTRE NOUVEAU CODE SECRET EST:  [SECRET]. ENVOYEZ VOS REQUETES PULL AU  N°06859594.</renitialisation>
+    </messages>
+</parametre>

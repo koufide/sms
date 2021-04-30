@@ -1,0 +1,200 @@
+{#{% extends 'base.html.twig' %} #}
+{% extends 'user/index.html.twig' %}
+
+{% block breadcrumb %}
+{{parent()}}
+<li class="breadcrumb-item active"><a href="{{ path('app_register') }}">Ajouter Utilisateur</a></li>
+{% endblock breadcrumb %}
+
+{% block title %}Utilisateur{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 mx-auto">
+
+            <fieldset>
+                <legend>
+
+                    <div class="row">
+                        <div class="col-2">
+                            <h3>Utilisateur</h3>
+                        </div><!-- col-2 //-->
+
+                        <div class="col-2 ml-auto sm">
+                            {#
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Ajouter
+                            </button> #}
+
+                            <a class="btn- btn-primary-" href="#" role="button" data-toggle="modal" data-target="#exampleModal">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </a>
+
+                        </div><!-- col-2 //-->
+
+                    </div>
+                    <!--row //-->
+
+
+                    <hr />
+
+                </legend>
+
+                {{ form_errors(registrationForm) }}
+                {{ form_start(registrationForm) }}
+
+                <div class="form-row align-items-center">
+                    <!-- <div class="form-group row"> -->
+                    <div class="col">
+                        {# <small id="helpId" class="text-muted">Help text</small> #}
+                        {{ form_row(registrationForm.email) }}
+                    </div>
+                    <!--col-->
+
+                    <!-- <div class="form-group"> -->
+                    <div class="col">
+                        {{ form_row(registrationForm.username) }}
+                    </div>
+                    <!-- </div> -->
+
+                    <div class="col">
+                        {{ form_row(registrationForm.displayname) }}
+                    </div>
+                    <!-- </div> -->
+                    <!--form-group-->
+                </div>
+
+
+                <div class="form-row align-items-center">
+                    <div class="col">
+                        {{ form_row(registrationForm.employeeid) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(registrationForm.telephone) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(registrationForm.samaccountname) }}
+                    </div>
+                </div>
+                <!--form-row-->
+
+
+                <div class="form-row align-items-center">
+                    <div class="col">
+                        {{ form_row(registrationForm.distinguishedname) }}
+                    </div>
+                </div>
+                <!--form-row-->
+
+                <div class="form-row align-items-center">
+                    <div class="col">
+                        {{ form_row(registrationForm.mail) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(registrationForm.description) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(registrationForm.manager) }}
+                    </div>
+                </div>
+                <!--form-row-->
+
+                {# <small id="helpId" class="text-muted">Help text</small> #}
+                <!-- <div class="form-group"> -->
+                {# <small id="helpId" class="text-muted">Help text</small> #}
+                <!-- </div> -->
+                <div class="form-group">
+                    {{ form_row(registrationForm.password) }}
+                    {# <small id="helpId" class="text-muted">Help text</small> #}
+                </div>
+
+                <div class="form-group">
+                    {{ form_row(registrationForm.confirm_password) }}
+                    {# <small id="helpId" class="text-muted">Help text</small> #}
+                </div>
+
+
+                {# <div class="form-group">
+                    {{ form_row(registrationForm.isActive) }}
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div> #}
+
+                <div class="form-group">
+                    {{ form_row(registrationForm.roles) }}
+                    {# <small id="helpId" class="text-muted">Help text</small> #}
+                </div>
+
+
+                {#
+                <div class="form-group">
+                    <label for="registration_form_role" class="required">Role</label>
+                    <select id="registration_form_role" class="custom-select" name="registration_form[role]">
+                        <!--<option selected>Open this select menu</option>-->
+                        {% for key, value in roles %}
+                        <option value="{{key}}">{{value}}</option>
+                        {% endfor %}
+                    </select>
+                </div> #}
+
+
+
+
+                <div class="form-group">
+                    <button class="btn btn-primary" name="btn_save">Enregistrer</button>
+                    {# <small id="helpId" class="text-muted">Help text</small> #}
+                </div>
+                {{ form_end(registrationForm) }}
+            </fieldset>
+            <!--fieldset //-->
+        </div><!-- col//-->
+    </div>
+    <!--row //-->
+</div>
+<!-- container-fluid //  -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <form action="{{ path('app_register')}}" method="get" name="frm_user_import">
+
+                <div class="form-group">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Recherche Utilisateur dans l'AD</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <label for="nom">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" aria-describedby="email"
+                            placeholder="Email">
+                        <small id="nom" class="form-text text-muted">Saisir l'email de l'utilisateur</small>
+                    </div><!-- modal-body //-->
+
+                </div>
+                <!--form-group //-->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <!--<button type="button" class="btn btn-primary">Rechercher</button> -->
+                    <input type="submit" class="btn btn-primary" value="Rechercher" />
+                </div><!-- modal-footer-->
+
+            </form>
+            <!--form //-->
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

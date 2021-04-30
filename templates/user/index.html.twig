@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateurs{% endblock %}
+
+{% block body %}
+<h3>Utilisateurs</h3>
+<hr />
+
+<table class="table mytable dataTable" id="myTable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Username</th>
+            <!-- <th>Password</th> -->
+            <th>Roles</th>
+            <th>Actif</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.username }}</td>
+            <!-- <td>{{ user.password }}</td> -->
+            <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+            <td>{{ user.isActive ? 'Yes' : 'No' }}</td>
+            <td>
+                <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
+                <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="7">Aucun utilisateur</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<hr />
+<a class="btn btn-outline-primary" href="{{ path('user_new') }}">Ajouter</a>
+<button id="supprimer" class="btn btn-danger">Supprimer</button>
+
+{% endblock %}
+
+
+{% block breadcrumb %}
+{{parent()}}
+<li class="breadcrumb-item active"><a href="{{ path('user_index') }}">Utilisateurs</a></li>
+{% endblock breadcrumb %}

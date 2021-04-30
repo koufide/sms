@@ -1,0 +1,22 @@
+{% extends 'message/index.html.twig' %}
+{% set pagename = 'Nouveau Message' %}
+{% block title %}
+    {{pagename}}{% endblock %}
+{% block body %}
+    <h3>
+        Message
+        {# {{pagename}} #}
+    </h3>
+    <hr/>
+    {{ include('message/_form_file.html.twig') }}
+    {# <a role="button" class="btn btn-outline-primary" href="{{ path('message_index') }}">Messages</a> #}
+{% endblock %}
+{% block breadcrumb %}
+    {{parent()}}
+    <li class="breadcrumb-item active">
+        <a href="{{ path('message_new') }}">
+            Nouveau
+            {# {{ pagename }} #}
+        </a>
+    </li>
+{% endblock breadcrumb %}

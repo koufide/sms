@@ -1,0 +1,82 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: 'fr'
+    uploads_directory: '%kernel.project_dir%/public/fichiers/uploads/'
+    api_directory: '%kernel.project_dir%/api/'
+    # archives_uploads_directory: '%kernel.project_dir%/public/fichiers/uploads/archives/'
+    # generate_directory: '%kernel.project_dir%/public/fichiers/generate/'
+    # error_directory: '%kernel.project_dir%/public/fichiers/error/'
+    # temp_directory: '%kernel.project_dir%/public/fichiers/temp/'
+    # remote_directory: '/export/home2/cgbtst/home/'
+
+    # les API
+    api_load_abonne: 'loadAbonnement2.php'
+    api_load_compte: 'http://192.168.5.66/sms/api/loadCompte.php'
+
+    positionExcelBenef: '12'
+
+    # typeconnexion: ldap
+    typeconnexion: appli
+
+    port_sftp: '22'
+    host_sftp: '192.168.1.22'
+    username_sftp: 'iexploit'
+    password_sftp: 'iexploit'
+    #host_sftp: '192.168.202.100'
+    # username_sftp: 'cgbtst'
+    # password_sftp: 'ivoire16'
+
+    ldap_host: '192.168.1.1'
+    ldap_user: 'marc'
+    ldap_password: 'Marc123'
+    ldap_dom: 'koufide.com'
+    ldap_dn: 'DC=koufide,DC=com'
+
+    # ldap_host: '192.168.200.100'
+    # ldap_host: '192.168.200.101'
+    # ldap_user: 'fidelin.kouame'
+    # ldap_password: 'Guillaume%2019'
+    # ldap_dom: 'bridgebankgroup.com'
+    # ldap_dn: 'DC=bridgebankgroup,DC=com'
+
+    ldap_port: '389'
+    ldap_filtre: '(&(objectCategory=person)(objectClass=user)(sAMAccountName={login})(!(userAccountControl:1.2.840.113556.1.4.803:=2)))'
+
+services:
+    # Symfony\Component\Ldap\Ldap:
+    #     arguments: ['@Symfony\Component\Ldap\Adapter\ExtLdap\Adapter']
+    # Symfony\Component\Ldap\Adapter\ExtLdap\Adapter:
+    #     arguments:
+    #         # -   host: 192.168.200.100
+    #         -   host: 192.168.1.1
+    #             port: 389
+    #             encryption: 'none'
+    #             options:
+    #                 protocol_version: 3
+    #                 referrals: false
+
+
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+    # controllers are imported separately to make sure services can be injected
+    # as action arguments even if you don't extend any base controller class
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+

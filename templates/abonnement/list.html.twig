@@ -1,0 +1,104 @@
+{# {% extends 'abonnement/index.html.twig' %} #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Abonnements
+{% endblock %}
+
+{% block body %}
+
+    <h3>Abonnements</h3>
+    <hr/>
+
+
+    <div>
+        <button class="btn btn-primary btn-sm" id="btnLoadAbonne">
+            Load
+            <!-- <i aria-hidden="true" class="fa fa-plus"></i> -->
+            <i class="fas fa-sync-alt    "></i>
+        </button>
+
+        <button class="btn btn-primary btn-sm" id="btnActiverAbonne">
+            Activer
+            <!-- <i aria-hidden="true" class="fa fa-plus"></i> -->
+            <i class="fas fa-lock-open    "></i>
+        </button>
+
+        <button class="btn btn-primary btn-sm" id="btnDesactiverAbonne">
+            Désactiver
+            <!-- <i aria-hidden="true" class="fa fa-plus"></i> -->
+            <i aria-hidden="true" class="fa fa-lock"></i>
+        </button>
+
+        <button class="btn btn-primary btn-sm" id="btnSupprimerAbonne">
+            Supprimer
+            <!-- <i aria-hidden="true" class="fa fa-plus"></i> -->
+            <i aria-hidden="true" class="fa fa-times"></i>
+        </button>
+
+        <br/>
+        <br/>
+    </div>
+
+    <table class="table display table-hover table-sm table-bordered_ table-striped_ table-dark_" id="towns_dt_table" style="width:100%">
+
+        <caption>Abonnements</caption>
+
+        <tfoot>
+            <tr>
+                <th>PHONE</th>
+                <th>CLIENT</th>
+                <th>COMPTE</th>
+                <th>AGENCE</th>
+                <th>STATUT</th>
+            </tr>
+        </tfoot>
+        <thead class="thead-light">
+            <tr>
+                <th>PHONE</th>
+                <th>CLIENT</th>
+                <th>COMPTE</th>
+                <th>AGENCE</th>
+                <th>STATUT</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+{% endblock %}
+
+
+{% block breadcrumb %}
+    {{parent()}}
+    <li class="breadcrumb-item active">
+        <a href="{{ path('abonnement_list') }}">Abonnements</a>
+    </li>
+{% endblock breadcrumb %}
+
+
+{% block javascripts %}
+    {{parent()}}
+    <script>
+
+        $(document).ready(function () {
+            // Add a text input to each footer cell
+
+
+            /*
+         var oTable = $('#example').dataTable({
+            "bProcessing": true,
+            "bServerSide": true,
+            'sAjaxSource': "{{ path('abonnement_list_ajax2') }}",
+            "bPaginate": true, // Désactive la pagination
+            "bLengthChange": true, // Désactive le nombre de résultats
+            "bFilter": true, // Désactive le champ recherche
+            "bSort": false, // Désactive le classement par colonnes
+            "bInfo": true,  // Désactive les infos comme le nombre de résultats
+            "bAutoWidth": false, // Désactive l'ajustement des colonnes
+        });
+        */
+
+
+        });
+    </script>
+{% endblock %}

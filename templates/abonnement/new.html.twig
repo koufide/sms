@@ -1,0 +1,30 @@
+{% extends 'abonnement/index.html.twig' %}
+
+{% block title %}Nouvel abonnement{% endblock %}
+
+{% block body %}
+
+<h3>Nouvel abonnement</h3>
+<hr />
+
+<div id="app_abonnement___">
+    ${message}
+
+    {{ include('abonnement/_form.html.twig') }}
+
+</div>
+<!--app_abonnement-->
+
+{#
+<a role="button" class="btn btn-outline-primary" href="{{ path('abonnement_index') }}">Abonnements</a>
+#}
+
+
+
+{% endblock %}
+
+
+{% block breadcrumb %}
+{{parent()}}
+<li class="breadcrumb-item active"><a href="{{ path('abonnement_new') }}">Nouveau</a></li>
+{% endblock breadcrumb %}

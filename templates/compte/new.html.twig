@@ -1,0 +1,11 @@
+{% extends 'compte/index.html.twig' %}
+
+{% block title %}New Compte{% endblock %}
+
+{% block body %}
+<h1>Create new Compte</h1>
+
+{{ include('compte/_form.html.twig') }}
+
+<a class="btn btn-secondary" href="{{ path('compte_index') }}">Comptes</a>
+{% endblock %}

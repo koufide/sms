@@ -1,0 +1,228 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Abonnements{% endblock %}
+
+{% block body %}
+<h3>Abonnements</h3>
+<hr />
+
+<span id="idRetourAjax"></span>
+
+<table class="table myDataTable" id="myTableAbonne">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Phone</th>
+            <th>Statut</th>
+            <!-- <th>Motif</th> -->
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for abonnement in abonnements %}
+        <tr>
+            <td>{{ abonnement.id }}</td>
+            <td>{{ abonnement.phone }}</td>
+            <td class="btnDesac">{{ abonnement.isActif ? '<a class="btn btnDesac" href="#"> <i class="fa fa-unlock"
+                        aria-hidden="true"></i></a>'
+                : '<a class="btn btnDesac" href="#"> <i class="fa fa-lock" aria-hidden="true"></i></a>' }}</td>
+            <!-- <td>{{ abonnement.motif }}</td> -->
+            <td>
+                <a href="{{ path('abonnement_show', {'id': abonnement.id}) }}"> <i class="fa fa-search-plus"
+                        aria-hidden="true"></i></a> &nbsp;
+                <a href="{{ path('abonnement_edit', {'id': abonnement.id}) }}"> <i class="fas fa-pen    "></i></a>&nbsp;
+                <a class="btn btnSupprimer" href="#"> <i class="fa fa-trash" aria-hidden="true"></i></a>&nbsp;
+
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr />
+{#
+<a role="button" class="btn btn-outline-primary" href="{{ path('abonnement_new') }}">Nouveau</a>
+#}
+
+<button class="btn btn-outline-primary" id="btnSupprimer">
+    Supprimer <i class="fa fa-eraser" aria-hidden="true"></i>
+</button>
+<a name="nouvAbonne" id="nouvAbonne" class="btn btn-outline-primary" href="#" role="button" data-toggle="modal"
+    data-target="#nouvAbonneModal" data-whatever="@mdo">
+    <i class="fa fa-plus" aria-hidden="true"></i>
+    Nouveau</a>
+
+
+
+<!--formulaire d abonnement -->
+<div class="modal fade" id="nouvAbonneModal" tabindex="-1" role="dialog" aria-labelledby="nouvAbonneModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg-" role="document">
+        <div class="modal-content">
+
+            {{ form_start(form, {
+            'attr':{'id':'idFormNouvAbonne'}
+            }) }}
+            <div class="modal-header">
+                <h5 class="modal-title" id="nouvAbonneModalLabel">Nouvel abonnement</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!--
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label" data-toggle="modal" data-target="#nouvAbonneCompteModal"
+                        data-whatever="@mdo">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+            -->
+                <div class="form-group">
+
+
+                    {{ form_label(form.compte,'Compte',{
+                    'label_attr':{
+                    'class':'col-form-label','data-toggle':'modal','data-target':'#nouvAbonneCompteModal'
+                    }
+                    })}}
+
+                    <input type="text" name="abonnement_compte_text" id="abonnement_compte_text" class="form-control"
+                        readonly="readonly" placeholder="Choisir le compte" />
+
+                    {{ form_widget(form.compte,{
+                    'attr':{'class':''}
+                    }) }}
+
+
+                </div>
+
+                <small id="idInfoClient" class="form-text text-muted">
+                    <div class="row">
+                        <div class="col">Indice: <span id="idClient"></span></div>
+                        <div class="col">Nom: <span id="idNomClient"></span></div>
+                        <div class="col">Tel: <span id="idTel"></span></div>
+                        <div class="col">RM: <span id="idTel"></span></div>
+                    </div>
+                </small>
+
+                <br />
+                <div class="form-group">
+                    {{ form_row(form.phone) }}
+                </div>
+
+
+                <div class="form-group">
+                    {{ form_label(form.datenais,'Date de naissance',{
+                        'label_attr':{'class':''}
+                    })}}
+
+                    {{ form_widget(form.datenais,{
+                        'attr':{'class':''}
+                    }) }}
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <!--<button type="button" class="btn btn-primary">Send message</button>-->
+                <button type="submit" id="btnSaveNouvelAbonne" class="btn btn-outline-primary">{{
+                    button_label|default('Enregistrer')
+                    }}</button>
+
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+
+
+
+<!--liste des clients / comptes -->
+<div class="modal fade" id="nouvAbonneCompteModal" tabindex="-1" role="dialog"
+    aria-labelledby="nouvAbonneCompteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="nouvAbonneModalCompteLabel">Clients</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!--
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            -->
+
+                <table id="myTableCompte2"
+                    class="myTable__ table table-inverse table-inverse table-responsive tableClients">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>id</th>
+                            <!-- <th>agence</th> -->
+                            <!-- <th>RM</th> -->
+                            <th>nomclient</th>
+                            <th>client</th>
+                            <!-- <th>typecli</th> -->
+                            <th>compte</th>
+                            <th>ncg</th>
+                            <!-- <th>date clot</th> -->
+                            <th>tel</th>
+                            <th>categorie</th>
+                            <th>Choisir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for c in comptes %}
+                        <tr>
+                            <td>{{c.id}} </td>
+                            <!-- <td scope="row">{{c.agence}} </td> -->
+                            <!-- <td scope="c">{{c.nomges}}</td> -->
+                            <td scope="row">{{c.nomclient}}</td>
+                            <td>{{c.client}}</td>
+                            <!-- <td>{{c.typecli}}</td> -->
+                            <td>{{c.compte}}</td>
+                            <td>{{c.ncg}}</td>
+                            <!-- <td>{{c.datfrmcli}}</td> -->
+                            <td>{{c.tel}}</td>
+                            <td>{{c.categorie}}</td>
+                            <td>
+                                <div id="app_select_compte" class="app_select_compte">
+                                    <a v-on:click="selectCompte" href="#">
+                                        <!-- <i class="fa fa-check-square" aria-hidden="true"></i> -->
+                                        <i class="fa fa-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                {# <a href="{{ path('compte_select_ajax',{'id':c.id}) }}"> #}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <!-- <button type="button" class="btn btn-primary">Send message</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+{% block breadcrumb %}
+{{parent()}}
+<li class="breadcrumb-item active"><a href="{{ path('abonnement_index') }}">Abonnements</a></li>
+{% endblock breadcrumb %}

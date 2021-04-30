@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+{% set pagename = 'Messages' %}
+{% block title %}
+    {{pagename}}
+{% endblock %}
+{% block body %}
+    <h3>
+        {{pagename}}</h3>
+    <hr/>
+    <div id="app_message">
+        <!-- <button id="supprimer" class="btn btn-danger">Supprimer</button> -->
+        <!-- <button class="btn btn-primary" v-on:click="detailmessage()">Detail</button> -->
+        <hr/>
+            <table class="mytable_message display compact hover row-border
+                                                                                table table-striped table-bordered---" id="mytable_message"> <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titre</th>
+                    <th>Contenu</th>
+                    <th>Datedit</th>
+                    <th>Datevalid1</th>
+                    <th>IsValid1</th>
+                    <th>IsDiffu</th>
+                    <th>IsValid2</th>
+                    <th>Datevalid2</th>
+                    <th>Datediffu</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for message in messages %}
+                    <tr>
+                        <td>
+                            {{ message.id }}</td>
+                        <td>
+                            {{ message.titre }}</td>
+                        <td>
+                            {{ message.contenu |slice(0, 20)~'...' }}</td>
+                        <td>
+                            {{ message.datedit ? message.datedit|date('Y-m-d H:i:s') : '' }}</td>
+                        <td>
+                            {{ message.datevalid1 ? message.datevalid1|date('Y-m-d H:i:s') : '' }}</td>
+                        <td>
+                            {{ message.isValid1 ? 'Yes' : 'No' }}</td>
+                        <td>
+                            {{ message.isDiffu ? 'Yes' : 'No' }}</td>
+                        <td>
+                            {{ message.isValid2 ? 'Yes' : 'No' }}</td>
+                        <td>
+                            {{ message.datevalid2 ? message.datevalid2|date('Y-m-d H:i:s') : '' }}</td>
+                        <td>
+                            {{ message.datediffu ? message.datediffu|date('Y-m-d H:i:s') : '' }}</td>
+                        <td>
+                            <a href="{{ path('message_show', {'id': message.id}) }}">show</a>
+                            <a href="{{ path('message_edit', {'id': message.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="11">no records found</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- message-->
+    <a role="button" class="btn btn-outline-primary" href="{{ path('message_new') }}">Nouveau</a>
+    <button class="btn btn-outline-danger" id="btnTousValiderMessage" role="button">Tous Valider</button>
+{% endblock %}
+{% block breadcrumb %}
+    {{parent()}}
+    <li class="breadcrumb-item active">
+        <a href="{{ path('message_index') }}">
+            {{ pagename }}</a>
+    </li>
+{% endblock breadcrumb %}

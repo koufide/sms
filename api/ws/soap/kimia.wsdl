@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!-- partie 1 : Definitions -->
+<definitions name="KimiaDieudonnee" targetNamespace="urn:KimiaDieudonnee" 
+    xmlns:typens="urn:KimiaDieudonnee" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+    <!-- partie 2 : Types-->
+    <types>
+        <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:KimiaDieudonnee">
+        </xsd:schema>
+    </types>
+
+
+    <!-- partie 3 : Message 1-->
+
+    <message name="addNewRequest">
+        <part name="prenom" type="xsd:string"/>
+        <part name="nom" type="xsd:string"/>
+    </message>
+    <message name="addNewResponse">
+        <part name="return" type="xsd:string"/>
+    </message>
+
+    <!-- partie 3 : Message 2-->
+
+    <message name="displayDataFromDataBaseRequest">
+        <part name="critere" type="xsd:string"/>
+    </message>
+    <message name="displayDataFromDataBaseResponse">
+        <part name="return" type="soap-enc:Array"/>
+    </message>
+
+
+    <!-- partie 3 : Message 3-->
+
+    <message name="sendSMSRequest">
+        <part name="to" type="xsd:string"/>
+        <part name="message" type="xsd:string"/>
+    </message>
+    <message name="sendSMSResponse">
+        <part name="return" type="xsd:string"/>
+    </message>
+  
+
+    <!-- partie 4 : Port Type -->
+    <portType name="KimiaDieudonneePort">
+        <!-- partie 5 : Operation 1-->
+        <operation name="addNew">
+            <input message="typens:addNewRequest"/>
+            <output message="typens:addNewResponse"/>
+        </operation>
+
+        <!-- partie 5 : Operation 1-->
+        <operation name="displayDataFromDataBase">
+            <input message="typens:displayDataFromDataBaseRequest"/>
+            <output message="typens:displayDataFromDataBaseResponse"/>
+        </operation>
+
+        <!-- partie 6 : Operation 1-->
+        <operation name="sendSMS">
+            <input message="typens:sendSMSRequest"/>
+            <output message="typens:sendSMSResponse"/>
+        </operation>
+
+    </portType>
+
+    <!-- partie 6 : Binding -->
+    <binding name="KimiaDieudonneeBinding" type="typens:KimiaDieudonneePort">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="addNew">
+            <soap:operation soapAction="KimiaDieudonneeAction"/>
+            <input name="addNewRequest">
+                <soap:body use="encoded" namespace="urn:KimiaDieudonnee" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output name="addNewResponse">
+                <soap:body use="encoded" namespace="urn:KimiaDieudonnee" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+
+        <operation name="displayDataFromDataBase">
+            <soap:operation soapAction="KimiaDieudonneeAction"/>
+            <input name="displayDataFromDataBaseRequest">
+                <soap:body use="encoded" namespace="urn:KimiaDieudonnee" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output name="displayDataFromDataBaseResponse">
+                <soap:body use="encoded" namespace="urn:KimiaDieudonnee" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+
+        <!-- nouvelle fonction -->
+        <operation name="sendSMS">
+            <soap:operation soapAction="KimiaDieudonneeAction"/>
+            <input name="sendSMSRequest">
+                <soap:body use="encoded" namespace="urn:KimiaDieudonnee" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output name="sendSMSResponse">
+                <soap:body use="encoded" namespace="urn:KimiaDieudonnee" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+
+    </binding>
+
+    <!-- partie 7 : Service --> 
+
+    <service name="KimiaDieudonneeService">
+        <documentation>Retourne une phrase simple </documentation>
+        <!-- partie 8 : Port -->
+        <port name="KimiaDieudonneePort" binding="typens:KimiaDieudonneeBinding">
+            <soap:address location="http://192.168.56.220/test/webservice/soap/server.php"/>
+        </port>
+    </service>
+</definitions>

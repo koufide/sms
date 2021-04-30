@@ -1,0 +1,112 @@
+{# {% extends 'base.html.twig' %} #}
+{% extends 'message/index.html.twig' %}
+
+{% set pagename = 'Détail' %}
+
+{% block title %}Détail message{% endblock %}
+
+{% block body %}
+<h3>{{pagename}}</h3>
+
+
+{# {{ include('message/_valide_form.html.twig') }} #}
+
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ message.id }}</td>
+        </tr>
+        <tr>
+            <th>Titre</th>
+            <td>{{ message.titre }}</td>
+        </tr>
+        <tr clASS="bg-secondary---">
+            <th>Contenu</th>
+            <td>{{ message.contenu }}</td>
+        </tr>
+        <tr>
+            <th>Date éditition</th>
+            <td>{{ message.datedit ? message.datedit|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
+        <tr>
+            <th>Première validation</th>
+            <td>{{ message.isValid1 ? 'Oui' : 'Non' }}</td>
+        </tr>
+
+        {% if message.isValid1 %}
+        <tr>
+            <th>Date première validation</th>
+            <td>{{ message.datevalid1 ? message.datevalid1|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
+        {% endif %}
+
+        <tr>
+            <th>Deuxième validation</th>
+            <td>{{ message.isValid2 ? 'Oui' : 'Non' }}</td>
+        </tr>
+
+        {% if message.isValid2 %}
+        <tr>
+            <th>Date Deuxième validation</th>
+            <td>{{ message.datevalid2 ? message.datevalid2|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
+
+        {% endif %}
+
+        <tr>
+            <th>Diffusé</th>
+            <td>{{ message.isDiffu ? 'Oui' : 'Non' }}</td>
+        </tr>
+
+        {% if message.isDiffu %}
+        <tr>
+            <th>Date diffusion</th>
+            <td>{{ message.datediffu ? message.datediffu|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
+
+        {% endif %}
+    </tbody>
+</table>
+
+<a role="button" class="btn btn-outline-info" href="{{ path('message_index') }}"> <i class="fa fa-arrow-left"
+        aria-hidden="true"></i> Messages</a>
+
+
+m: {{ is_granted('ROLE_MARKETING') }}
+v: {{ message.isValid1 }}
+s: {{ is_granted('ROLE_SUP_MARKETING') }}
+v2: {{ message.isValid2 }}
+
+
+
+{% if message.isValid1 %}
+{% if is_granted('ROLE_SUP_MARKETING') and (not message.isValid2) %}
+<a role="button" class="btn btn-outline-info" href="{{ path('message_edit', {'id': message.id}) }}">Modifier</a>
+{{ include('message/_delete_form.html.twig') }}
+{{ include('message/_valide_form.html.twig') }}
+{% endif %}
+
+
+{% else %}
+
+
+<a role="button" class="btn btn-outline-info" href="{{ path('message_edit', {'id': message.id}) }}">Modifier</a>
+{{ include('message/_delete_form.html.twig') }}
+{{ include('message/_valide_form.html.twig') }}
+
+{% endif %}
+
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block breadcrumb %}
+{{parent()}}
+<li class="breadcrumb-item active"><a href="{{ path('message_show',{'id':message.id}) }}"> {{ message.titre }} </a></li>
+{% endblock breadcrumb %}

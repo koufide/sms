@@ -1,0 +1,33 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+
+ob_start();
+retour_json(1, "Compte   introuvable ou desactive");
+
+
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+$out1 = ob_get_contents();
+// var_dump($out1);
+$fp = fopen('sendsms.log', 'w');
+fwrite($fp, $out1);
+fclose($fp);
+
+
+
+
+function retour_json($erreur, $message)
+{
+    header('Content-type: application/json');
+    // var_dump($message);
+    // echo $message;
+    // exit(0);
+    echo $retour = json_encode([
+        'error' => $erreur,
+        'result' => $message
+    ]);
+    // print "<br/>\n retour => $retour";
+    //return echo $retour;
+}

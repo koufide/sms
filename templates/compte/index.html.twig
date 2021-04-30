@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compte{% endblock %}
+
+{% block body %}
+<h3>Comptes</h3>
+<hr />
+
+<div id="app_compte">
+    <button v-on:click="fnRechargerCompte" id="btnRechargerCompte__" class="btn btn-outline-info">Recharger</button>
+    <span class="text-danger" v-if="message.nbre_lignes">${message.nbre_lignes} comptes importés</span>
+    <hr />
+
+</div>
+
+<table class="table mytable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>AGENCE</th>
+            <th>AGENCELIB</th>
+            <th>NOMGES</th>
+            <th>CLIENT</th>
+            <th>NOMCLIENT</th>
+            <th>TYPECLI</th>
+            <th>DATOUVCLI</th>
+            <th>DATFRMCLI</th>
+            <th>COMPTE</th>
+            <th>NCG</th>
+            <th>TYP</th>
+            <th>TEL</th>
+            <th>CATEGORIE</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for compte in comptes %}
+        <tr>
+            <td>{{ compte.id }}</td>
+            <td>{{ compte.AGENCE }}</td>
+            <td>{{ compte.AGENCELIB }}</td>
+            <td>{{ compte.NOMGES }}</td>
+            <td>{{ compte.CLIENT }}</td>
+            <td>{{ compte.NOMCLIENT }}</td>
+            <td>{{ compte.TYPECLI }}</td>
+            <td>{{ compte.DATOUVCLI }}</td>
+            <td>{{ compte.DATFRMCLI }}</td>
+            <td>{{ compte.COMPTE }}</td>
+            <td>{{ compte.NCG }}</td>
+            <td>{{ compte.TYP }}</td>
+            <td>{{ compte.TEL }}</td>
+            <td>{{ compte.CATEGORIE }}</td>
+            <td>
+                <a href="{{ path('compte_show', {'id': compte.id}) }}">show</a>
+                <a href="{{ path('compte_edit', {'id': compte.id}) }}">edit</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="16">no records found</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a class="btn btn-outline-info" href="{{ path('compte_new') }}">Nouveau</a>
+
+
+
+{% endblock %}
+
+
+{% block breadcrumb %}
+{{parent()}}
+<li class="breadcrumb-item active"><a href="{{ path('compte_index') }}">Comptes</a></li>
+{% endblock breadcrumb %}

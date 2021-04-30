@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compte{% endblock %}
+
+{% block body %}
+    <h1>Compte</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ compte.id }}</td>
+            </tr>
+            <tr>
+                <th>AGENCE</th>
+                <td>{{ compte.AGENCE }}</td>
+            </tr>
+            <tr>
+                <th>AGENCELIB</th>
+                <td>{{ compte.AGENCELIB }}</td>
+            </tr>
+            <tr>
+                <th>NOMGES</th>
+                <td>{{ compte.NOMGES }}</td>
+            </tr>
+            <tr>
+                <th>CLIENT</th>
+                <td>{{ compte.CLIENT }}</td>
+            </tr>
+            <tr>
+                <th>NOMCLIENT</th>
+                <td>{{ compte.NOMCLIENT }}</td>
+            </tr>
+            <tr>
+                <th>TYPECLI</th>
+                <td>{{ compte.TYPECLI }}</td>
+            </tr>
+            <tr>
+                <th>DATOUVCLI</th>
+                <td>{{ compte.DATOUVCLI }}</td>
+            </tr>
+            <tr>
+                <th>DATFRMCLI</th>
+                <td>{{ compte.DATFRMCLI }}</td>
+            </tr>
+            <tr>
+                <th>COMPTE</th>
+                <td>{{ compte.COMPTE }}</td>
+            </tr>
+            <tr>
+                <th>NCG</th>
+                <td>{{ compte.NCG }}</td>
+            </tr>
+            <tr>
+                <th>TYP</th>
+                <td>{{ compte.TYP }}</td>
+            </tr>
+            <tr>
+                <th>TEL</th>
+                <td>{{ compte.TEL }}</td>
+            </tr>
+            <tr>
+                <th>CATEGORIE</th>
+                <td>{{ compte.CATEGORIE }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ compte.phone }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('compte_index') }}">back to list</a>
+
+    <a href="{{ path('compte_edit', {'id': compte.id}) }}">edit</a>
+
+    {{ include('compte/_delete_form.html.twig') }}
+{% endblock %}

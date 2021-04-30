@@ -1,0 +1,7 @@
+<form style="display: inline;" method="post" action="{{ path('message_valide', {'id': message.id}) }}" onsubmit="return confirm('Etes vous sûr de vouloir valider ce message?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ message.id) }}">
+    <button role="button" class="btn btn-outline-danger">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Valider</button>
+</form>

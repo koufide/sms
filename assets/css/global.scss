@@ -1,0 +1,39 @@
+// assets/css/global.scss
+
+// customize some Bootstrap variables
+// $primary: darken(#428bca, 20%);
+
+// $btn-primary: darken(red, 20%);
+
+ $body-bg:                  #172530;
+// $body-color:                black;
+
+// a {
+// color: var(--red);
+// }
+// $navbar-dark-color : #172530;
+// $navbar-dark-brand-color:#172530;
+
+// $navbar-dark-color:                 rgba(#172530, .5) ;
+$dark:          #172530;
+
+$navbar-light-active-color: #C7CACD;
+$navbar-light-brand-hover-color: white;
+
+$navbar-light-color: #C7CACD;
+$navbar-light-hover-color: white;
+
+
+$card-spacer-y:                     .10rem !default;
+$card-spacer-x:                     1.0rem !default;
+
+
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+
+
+
+// @import "~bootstrap/dist/css/bootstrap.min.css";
+// @import "~bootstrap/dist/js/bootstrap.min.js";

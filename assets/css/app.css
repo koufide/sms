@@ -1,0 +1,56 @@
+body {
+    /* background-color: lightgray; */
+    /* background-color: blue; */
+    background-color: #172530;
+}
+
+.card{margin-bottom: 1em;}  
+.card-header {
+    padding: 0;
+    margin-bottom: 0;
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+ #bmilieu{
+    margin-top: 5rem !important;
+} 
+
+#bcorps{
+    /* background-color:#F7F7F7; */
+    background-color:white;
+    min-height: 35em;
+    overflow: hidden;
+}
+
+ #leftmenu{
+    background-color: #172530;
+} 
+
+/* .menuleft {
+    margin-top: 1em;
+    background-color: #172530;
+} */
+
+/* .env {
+    background-color: #172530;
+} */
+
+/* a {
+    color: #172530;
+} */
+
+
+#dv_frm_login{
+    background-color: white
+}
+
+.fixed-top {
+    height: 4em;
+}
+
+
+.card-header {
+    overflow: hidden
+};

@@ -1,0 +1,15 @@
+<div
+    id="app_message">
+    {# ${message} #}
+    {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+    {# {{ form_widget(form) }} #}
+    {{ form_row(form.attachment) }}
+    {{ form_row(form.titre) }}
+    {{ form_row(form.contenu) }}
+    {{ form_row(form.isDiffere) }}
+    {{ form_row(form.datediffu) }}
+    <button class="btn btn-outline-primary" role="button">
+        {{ button_label|default('Enregistrer') }}</button>
+    {{ form_end(form) }}
+</div>
+<!--app_message-->

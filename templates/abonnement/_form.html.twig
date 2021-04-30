@@ -1,0 +1,104 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}
+
+
+
+{#
+{{ form_start(form) }}
+{{ form_row(form.datenais) }}
+<div class="form-group">
+    <small id="helpId" class="text-muted" role="button" data-toggle="modal" data-target="#myModalCompte">
+        <a href="#">Choisir </a>
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalCompte">
+            Open modal
+        </button> -->
+    </small>
+    {{ form_row(form.compte) }}
+</div>
+{{ form_row(form.phone) }}
+<button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}
+#}
+
+
+
+
+
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="myModalCompte">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Liste des clients</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+
+                <table id="myTableCompte" class="myTable__ table table-inverse table-inverse table-responsive">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>id</th>
+                            <!-- <th>agence</th> -->
+                            <!-- <th>RM</th> -->
+                            <th>nomclient</th>
+                            <th>client</th>
+                            <!-- <th>typecli</th> -->
+                            <th>compte</th>
+                            <th>ncg</th>
+                            <!-- <th>date clot</th> -->
+                            <th>tel</th>
+                            <th>categorie</th>
+                            <th>Choisir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for c in comptes %}
+                        <tr>
+                            <td>{{c.id}} </td>
+                            <!-- <td scope="row">{{c.agence}} </td> -->
+                            <!-- <td scope="c">{{c.nomges}}</td> -->
+                            <td scope="row">{{c.nomclient}}</td>
+                            <td>{{c.client}}</td>
+                            <!-- <td>{{c.typecli}}</td> -->
+                            <td>{{c.compte}}</td>
+                            <td>{{c.ncg}}</td>
+                            <!-- <td>{{c.datfrmcli}}</td> -->
+                            <td>{{c.tel}}</td>
+                            <td>{{c.categorie}}</td>
+                            <td>
+                                <div id="app_select_compte" class="app_select_compte">
+                                    <a v-on:click="selectCompte" href="#">
+                                        <!-- <i class="fa fa-check-square" aria-hidden="true"></i> -->
+                                        <i class="fa fa-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                {# <a href="{{ path('compte_select_ajax',{'id':c.id}) }}"> #}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+<!-- modal-->

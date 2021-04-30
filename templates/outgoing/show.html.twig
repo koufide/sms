@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Outgoing{% endblock %}
+
+{% block body %}
+    <h1>Outgoing</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ outgoing.id }}</td>
+            </tr>
+            <tr>
+                <th>De</th>
+                <td>{{ outgoing.de }}</td>
+            </tr>
+            <tr>
+                <th>A</th>
+                <td>{{ outgoing.a }}</td>
+            </tr>
+            <tr>
+                <th>MessageId</th>
+                <td>{{ outgoing.messageId }}</td>
+            </tr>
+            <tr>
+                <th>StatusSendsms</th>
+                <td>{{ outgoing.statusSendsms }}</td>
+            </tr>
+            <tr>
+                <th>Text</th>
+                <td>{{ outgoing.text }}</td>
+            </tr>
+            <tr>
+                <th>SendsmsAt</th>
+                <td>{{ outgoing.sendsmsAt ? outgoing.sendsmsAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ResultsReports</th>
+                <td>{{ outgoing.resultsReports }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('outgoing_index') }}">back to list</a>
+
+    <a href="{{ path('outgoing_edit', {'id': outgoing.id}) }}">edit</a>
+
+    {{ include('outgoing/_delete_form.html.twig') }}
+{% endblock %}
