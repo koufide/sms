@@ -438,4 +438,30 @@
  echo fichier MPUSH non trouve<br/>
  echo fichier MPUSH non trouve<br/>
  echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve
+Parse error: syntax error, unexpected 'var' (T_VAR) in /var/www/html/sms/api/Fonction.php on line 78
+
+
+Parse error: syntax error, unexpected ')' in /var/www/html/sms/api/Fonction.php on line 81
+
+<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve
+Parse error: syntax error, unexpected '}', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /var/www/html/sms/api/Fonction.php on line 47
+
+<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
+ echo fichier MPUSH non trouve<br/>
  echo fichier MPUSH non trouve

@@ -1,0 +1,1637 @@
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:00:55
+
+<br/> new_text: E GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:68:</small>
+<b>array</b> <i>(size=0)</i>
+  <i><font color='#888a85'>empty</font></i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:01:21
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:68:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=35)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_currency' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:02:28
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:68:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=35)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_currency' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:05:17
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:70:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=36)</i>
+      'delai_min' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:06:40
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:71:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'diff' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'delai_min' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:07:32
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:71:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'diff' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:07:32'</font> <i>(length=8)</i>
+      'delai_min' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:08:11
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:71:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'diff' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:13:16'</font> <i>(length=8)</i>
+      'delai_min' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:08:49
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:71:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'diff' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'delai_min' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:09:20
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'delai_min' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:10:04
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:15:09'</font> <i>(length=8)</i>
+      'delai_min' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:11:01
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:16:06'</font> <i>(length=8)</i>
+      'delai_min' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:12:54
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:17:59'</font> <i>(length=8)</i>
+      'delai_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'17'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:13:37
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:18:42'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'18'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:17:14
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:22:19'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'22'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:17:19
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:22:24'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'22'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:17:21
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:22:26'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'22'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:20:08
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:25:14'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'25'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:20:39
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:25:44'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'25'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:23:54
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:28:59'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'28'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:30:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:26:40
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:31:45'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'31'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><br />
+<font size='1'><table class='xdebug-error xe-notice' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Notice: Undefined index: extract_min in /var/www/html/sms/api/Fonction.php on line <i>77</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0014</td><td bgcolor='#eeeeec' align='right'>400816</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/var/www/html/sms/api/test_intercept_sms.php' bgcolor='#eeeeec'>.../test_intercept_sms.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0171</td><td bgcolor='#eeeeec' align='right'>828792</td><td bgcolor='#eeeeec'>Fonction->interceptSMS(  )</td><td title='/var/www/html/sms/api/test_intercept_sms.php' bgcolor='#eeeeec'>.../test_intercept_sms.php<b>:</b>29</td></tr>
+</table></font>
+<pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:78:</small><small>int</small> <font color='#4e9a06'>0</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:30:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:27:15
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:32:20'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'32'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:78:</small><small>int</small> <font color='#4e9a06'>1</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:30:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:27:47
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:73:</small>
+<b>array</b> <i>(size=37)</i>
+  'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+  'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:32:52'</font> <i>(length=8)</i>
+  'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'32'</font> <i>(length=2)</i>
+  'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+  'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+  'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+  'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+  'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+  'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+  'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+  'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+  'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+  'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+  'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+  'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+  'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+  'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+  'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+  'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+  'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+  'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+  'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+  'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+  'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+  'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+  'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+  'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+  'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+  'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+  'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+  'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+  'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+  'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+  'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+  'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:79:</small><small>int</small> <font color='#4e9a06'>1</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:30:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:28:16
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:73:</small><small>string</small> <font color='#cc0000'>'33'</font> <i>(length=2)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:79:</small><small>int</small> <font color='#4e9a06'>1</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:30:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:28:44
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:33:49'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'33'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:79:</small><small>int</small> <font color='#4e9a06'>33</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:30:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:45:45
+
+<br/> new_text: LE GAB 13100024 EST HORS SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:54:55'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:50:50'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'50'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045373'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250707181823'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:54:04 LE GAB 13100024 EST HORS SERVICE'</font> <i>(length=53)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74242fc09'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74242fbf4'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:55'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:53:58'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:79:</small><small>int</small> <font color='#4e9a06'>50</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>false</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:48:23
+
+<br/> new_text: LE GAB 13100014 EST EN SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:57:06'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:51:17'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'51'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045374'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250575201581'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:56:15 LE GAB 13100014 EST EN SERVICE'</font> <i>(length=51)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74a8b20ab'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:08'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:13'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:79:</small><small>int</small> <font color='#4e9a06'>51</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>false</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:48:26
+
+<br/> new_text: LE GAB 13100014 EST EN SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:57:06'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:51:21'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'51'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045374'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250575201581'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:56:15 LE GAB 13100014 EST EN SERVICE'</font> <i>(length=51)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74a8b20ab'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:08'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:13'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:79:</small><small>int</small> <font color='#4e9a06'>51</font>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>false</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:49:49
+
+<br/> new_text: LE GAB 13100014 EST EN SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:72:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:57:06'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:52:43'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'52'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045374'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250575201581'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:56:15 LE GAB 13100014 EST EN SERVICE'</font> <i>(length=51)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74a8b20ab'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:08'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:13'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:79:</small><small>int</small> <font color='#4e9a06'>52</font>
+</pre>{"datexec":"2021-06-05 13:49:49","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...","retour":[]}<pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+<br/> new_text: LE GAB 13100014 EST EN SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:73:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:57:06'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:56:01'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'56'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045374'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250575201581'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:56:15 LE GAB 13100014 EST EN SERVICE'</font> <i>(length=51)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74a8b20ab'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:08'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:13'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:80:</small><small>int</small> <font color='#4e9a06'>56</font>
+</pre>{"datexec":"2021-06-05 13:53:07","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...","retour":[]}<pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:54:36
+
+<br/> new_text: LE GAB 13100014 EST EN SERVICE 
+<br/>array(1) {
+  [0]=>
+  array(37) {
+    ["sendsms_at"]=>
+    string(19) "2021-06-05 12:57:06"
+    ["diff_date"]=>
+    string(8) "00:57:30"
+    ["extract_min"]=>
+    string(2) "57"
+    ["id"]=>
+    string(7) "1045374"
+    ["de"]=>
+    string(11) "INCIDENT MO"
+    ["a"]=>
+    string(13) "2250575201581"
+    ["message_id"]=>
+    string(24) "BBG-MSG-ID-60bb74a8b20cf"
+    ["status_sendsms"]=>
+    string(24) "BBG-MSG-ID-60bb74a8b20cf"
+    ["text"]=>
+    string(51) "LE 05/06/21 12:56:15 LE GAB 13100014 EST EN SERVICE"
+    ["results_reports"]=>
+    string(1) "1"
+    ["letest"]=>
+    string(24) "BBG-MSG-ID-60bb74a8b20cf"
+    ["bulk_id"]=>
+    string(25) "BBG-BULK-ID-60bb74a8b20ab"
+    ["send_groupid"]=>
+    string(1) "1"
+    ["send_groupname"]=>
+    string(7) "PENDING"
+    ["send_id"]=>
+    string(2) "26"
+    ["send_name"]=>
+    string(16) "PENDING_ACCEPTED"
+    ["send_description"]=>
+    string(29) "Message sent to next instance"
+    ["sms_count"]=>
+    string(1) "1"
+    ["report_sentat"]=>
+    string(19) "2021-06-05 12:56:08"
+    ["report_doneat"]=>
+    string(19) "2021-06-05 12:56:13"
+    ["report_mccmnc"]=>
+    string(4) "null"
+    ["report_pricepermessage"]=>
+    string(2) "14"
+    ["report_currency"]=>
+    string(3) "XOF"
+    ["report_status_groupid"]=>
+    string(1) "3"
+    ["report_status_groupname"]=>
+    string(9) "DELIVERED"
+    ["report_status_id"]=>
+    string(1) "5"
+    ["report_status_name"]=>
+    string(20) "DELIVERED_TO_HANDSET"
+    ["report_status_description"]=>
+    string(28) "Message delivered to handset"
+    ["report_error_groupid"]=>
+    string(1) "0"
+    ["report_error_groupname"]=>
+    string(2) "OK"
+    ["report_error_id"]=>
+    string(1) "0"
+    ["report_error_name"]=>
+    string(8) "NO_ERROR"
+    ["report_error_description"]=>
+    string(8) "No Error"
+    ["report_error_permanent"]=>
+    string(0) ""
+    ["results_logs"]=>
+    NULL
+    ["tentative"]=>
+    string(1) "0"
+    ["applic"]=>
+    string(9) "MONETIQUE"
+  }
+}
+int(57)
+{"datexec":"2021-06-05 13:54:36","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...","retour":[]}bool(true)
+
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:55:42
+
+<br/> new_text: LE GAB 13100014 EST EN SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:73:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:57:06'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:58:36'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'58'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045374'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250575201581'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:56:15 LE GAB 13100014 EST EN SERVICE'</font> <i>(length=51)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74a8b20ab'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:08'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:13'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:80:</small><small>int</small> <font color='#4e9a06'>58</font>
+</pre>{"datexec":"2021-06-05 13:55:42","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...","retour":[]}bool(true)
+
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:55:54
+
+<br/> new_text: LE GAB 13100014 EST EN SERVICE 
+<br/><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:73:</small>
+<b>array</b> <i>(size=1)</i>
+  0 <font color='#888a85'>=&gt;</font> 
+    <b>array</b> <i>(size=37)</i>
+      'sendsms_at' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:57:06'</font> <i>(length=19)</i>
+      'diff_date' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'00:58:49'</font> <i>(length=8)</i>
+      'extract_min' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'58'</font> <i>(length=2)</i>
+      'id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1045374'</font> <i>(length=7)</i>
+      'de' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'INCIDENT MO'</font> <i>(length=11)</i>
+      'a' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2250575201581'</font> <i>(length=13)</i>
+      'message_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'status_sendsms' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'text' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'LE 05/06/21 12:56:15 LE GAB 13100014 EST EN SERVICE'</font> <i>(length=51)</i>
+      'results_reports' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'letest' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-MSG-ID-60bb74a8b20cf'</font> <i>(length=24)</i>
+      'bulk_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'BBG-BULK-ID-60bb74a8b20ab'</font> <i>(length=25)</i>
+      'send_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'send_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING'</font> <i>(length=7)</i>
+      'send_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'26'</font> <i>(length=2)</i>
+      'send_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'PENDING_ACCEPTED'</font> <i>(length=16)</i>
+      'send_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message sent to next instance'</font> <i>(length=29)</i>
+      'sms_count' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'1'</font> <i>(length=1)</i>
+      'report_sentat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:08'</font> <i>(length=19)</i>
+      'report_doneat' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'2021-06-05 12:56:13'</font> <i>(length=19)</i>
+      'report_mccmnc' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'null'</font> <i>(length=4)</i>
+      'report_pricepermessage' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'14'</font> <i>(length=2)</i>
+      'report_currency' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'XOF'</font> <i>(length=3)</i>
+      'report_status_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'3'</font> <i>(length=1)</i>
+      'report_status_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED'</font> <i>(length=9)</i>
+      'report_status_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'5'</font> <i>(length=1)</i>
+      'report_status_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'DELIVERED_TO_HANDSET'</font> <i>(length=20)</i>
+      'report_status_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'Message delivered to handset'</font> <i>(length=28)</i>
+      'report_error_groupid' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_groupname' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'OK'</font> <i>(length=2)</i>
+      'report_error_id' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'report_error_name' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'NO_ERROR'</font> <i>(length=8)</i>
+      'report_error_description' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'No Error'</font> <i>(length=8)</i>
+      'report_error_permanent' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>''</font> <i>(length=0)</i>
+      'results_logs' <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
+      'tentative' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'0'</font> <i>(length=1)</i>
+      'applic' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'MONETIQUE'</font> <i>(length=9)</i>
+</pre><pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/Fonction.php:80:</small><small>int</small> <font color='#4e9a06'>58</font>
+</pre>{"datexec":"2021-06-05 13:55:55","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...","retour":[]}bool(true)
+
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 13:56:47
+{"datexec":"2021-06-05 13:56:47","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...","retour":[]}<pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 14:01:22
+{"datexec":"2021-06-05 14:01:22","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...\n","retour":[]}<pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 14:01:25
+{"datexec":"2021-06-05 14:01:25","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...\n","retour":[]}<pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>
+
+
+
+ ========== EXECUTION TEST INTERCEPT SMS ====== 
+05/06/2021 14:01:26
+{"datexec":"2021-06-05 14:01:26","user":"test_powercard_","erreur":"0","message":"from: INCIDENT MO to: 2250575201581 sms: LE 05\/06\/21 12:56:15 LE GAB 13100014 EST EN SERVICE ,,,WAITING BEFORE SENDING...\n","retour":[]}<pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/sms/api/test_intercept_sms.php:33:</small><small>boolean</small> <font color='#75507b'>true</font>
+</pre>

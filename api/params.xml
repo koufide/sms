@@ -88,6 +88,7 @@
         <file_lock_mpush_sms4>lock_mpush_sms4.run</file_lock_mpush_sms4>
         <file_lock_dpush_sms>lock_dpush_sms.run</file_lock_dpush_sms>
         <file_lock_charge_sms>lock_charge_sms.run</file_lock_charge_sms>
+        <file_lock_charge_abonne>lock_charge_abonne.run</file_lock_charge_abonne>
         <file_alert_log>alert.log</file_alert_log>
         <file_createuti_log>createuti.log</file_createuti_log>
     </files>

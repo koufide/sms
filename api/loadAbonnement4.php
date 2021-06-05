@@ -53,21 +53,36 @@ $file_abonnesms = $api_rep . $nom_file_abonnesms;
 $ftp_outgoing_rep = $param->reps->ftp_outgoing;
 $push_rep = $ftp_outgoing_rep;
 
-$file_lock_push_sms = $param->files->file_lock_push_sms;
-$file_lock_push_sms = $log_rep . $file_lock_push_sms;
-
-
 $arch_outgoing = $param->reps->arch_outgoing;
 
 
-// # supprimer le fichier
-// unlink($file_lock_push_sms); ///fidelin a supprimer apres test
+$file_lock_push_sms = $param->files->file_lock_push_sms;
+$file_lock_push_sms = $log_rep . $file_lock_push_sms;
+// if (file_exists($file_lock_push_sms)) {
+//     exit("<br/>\n exit! traitement encours...");
+// } 
+// else {
+//     $myfile = fopen("$file_lock_push_sms", "w");
+// }
 
-if (file_exists($file_lock_push_sms)) {
-    exit("<br/>\n exit! traitement encours...");
-} else {
-    $myfile = fopen("$file_lock_push_sms", "w");
+$file_lock_charge_sms = $param->files->file_lock_charge_sms;
+$file_lock_charge_sms = $log_rep . $file_lock_charge_sms;
+// if (file_exists($file_lock_charge_sms)) {
+//     print("<br/>\n exit! chargement des sms encours...$file_lock_charge_sms");
+//     exit(0);
+// }
+
+
+$file_lock_charge_abonne = $param->files->file_lock_charge_abonne;
+$file_lock_charge_abonne = $log_rep . $file_lock_charge_abonne;
+if (file_exists($file_lock_charge_abonne)) {
+    exit("<br/>\n exit! chargement des abonnes encours...");
+} 
+else {
+    $myfile = fopen("$file_lock_charge_abonne", "w");
 }
+
+
 
 
 
@@ -500,7 +515,26 @@ try {
 }
 
 # supprimer le fichier
-unlink($file_lock_push_sms);
+// unlink($file_lock_push_sms);
+
+
+if(file_exists($file_lock_charge_abonne)){
+    // var_dump($file_lock_charge_abonne);
+    unlink($file_lock_charge_abonne);
+}
+
+if(file_exists($file_lock_charge_sms)){
+    var_dump($file_lock_charge_sms);
+    unlink($file_lock_charge_sms);
+}else{
+
+}
+
+
+if(file_exists($file_lock_push_sms)){
+    // var_dump($file_lock_push_sms);
+    unlink($file_lock_push_sms);
+}
 
 
 

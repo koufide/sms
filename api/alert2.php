@@ -45,8 +45,6 @@ $file_alert_log = $param->files->file_alert_log;
 
 $log_rep = $param->reps->log_rep;
 
-$file_lock_push_sms = $param->files->file_lock_push_sms;
-$file_lock_push_sms = $log_rep . $file_lock_push_sms;
 
 $uti = $param->sms->user;
 $mdp = $param->sms->mdp;
@@ -58,11 +56,24 @@ $mdp = $param->sms->mdp;
 
 
 
+$file_lock_push_sms = $param->files->file_lock_push_sms;
+$file_lock_push_sms = $log_rep . $file_lock_push_sms;
 if (file_exists($file_lock_push_sms)) {
-    exit("<br/>\n exit! traitement encours...");
+    exit("<br/>\n exit! diffusion sms encours...");
 } else {
     $myfile = fopen("$file_lock_push_sms", "w");
 }
+
+
+$file_lock_charge_abonne = $param->files->file_lock_charge_abonne;
+$file_lock_charge_abonne = $log_rep . $file_lock_charge_abonne;
+if (file_exists($file_lock_charge_abonne)) {
+    unlink($file_lock_push_sms); //supprimer le lock de diffu
+    exit("<br/>\n exit! chargement des abonnes encours...");
+} 
+// else {
+//     $myfile = fopen("$file_lock_charge_abonne", "w");
+// }
 
 
 // exit("<br/>\n --------quitter manuellement---------");

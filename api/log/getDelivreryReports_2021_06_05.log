@@ -819,7 +819,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 10<br/><br/><br/>
+ ------nbres lignes : 10
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -1191,7 +1192,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 6<br/><br/><br/>
+ ------nbres lignes : 6
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -1742,7 +1744,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 7<br/><br/><br/>
+ ------nbres lignes : 7
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -1755,7 +1758,8 @@ string(10) "2021/06/07"
 -------------------response---------------<br/>
 -------------------response---------------<br/>
 -------------------response---------------<br/>
- ------nbres lignes : 3<br/><br/><br/>
+ ------nbres lignes : 3
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -1948,7 +1952,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 5<br/><br/><br/>
+ ------nbres lignes : 5
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -1961,7 +1966,8 @@ string(10) "2021/06/07"
 -------------------response---------------<br/>
 -------------------response---------------<br/>
 -------------------response---------------<br/>
- ------nbres lignes : 3<br/><br/><br/>
+ ------nbres lignes : 3
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -2064,7 +2070,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 4<br/><br/><br/>
+ ------nbres lignes : 4
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -2167,7 +2174,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 4<br/><br/><br/>
+ ------nbres lignes : 4
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -2180,7 +2188,8 @@ string(10) "2021/06/07"
 -------------------response---------------<br/>
 -------------------response---------------<br/>
 -------------------response---------------<br/>
- ------nbres lignes : 3<br/><br/><br/>
+ ------nbres lignes : 3
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -2193,7 +2202,8 @@ string(10) "2021/06/07"
 -------------------response---------------<br/>
 -------------------response---------------<br/>
 -------------------response---------------<br/>
- ------nbres lignes : 3<br/><br/><br/>
+ ------nbres lignes : 3
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -2297,7 +2307,8 @@ Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
 -------------------response---------------cURL Error #:Operation timed out after 30001 milliseconds with 0 out of 0 bytes received<br/>
- ------nbres lignes : 5<br/><br/><br/>
+ ------nbres lignes : 5
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -2490,7 +2501,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 5<br/><br/><br/>
+ ------nbres lignes : 5
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -2773,7 +2785,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 6<br/><br/><br/>
+ ------nbres lignes : 6
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -2787,7 +2800,8 @@ string(10) "2021/06/07"
 -------------------response---------------<br/>
 -------------------response---------------<br/>
 -------------------response---------------<br/>
- ------nbres lignes : 4<br/><br/><br/>
+ ------nbres lignes : 4
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -4064,7 +4078,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 27<br/><br/><br/>
+ ------nbres lignes : 27
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -4891,7 +4906,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 18<br/><br/><br/>
+ ------nbres lignes : 18
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -5724,7 +5740,8 @@ Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
 -------------------response---------------<br/>
- ------nbres lignes : 22<br/><br/><br/>
+ ------nbres lignes : 22
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -6642,7 +6659,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 19<br/><br/><br/>
+ ------nbres lignes : 19
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -7920,7 +7938,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 22<br/><br/><br/>
+ ------nbres lignes : 22
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -11452,7 +11471,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 51<br/><br/><br/>
+ ------nbres lignes : 51
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -14444,7 +14464,8 @@ Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
 -------------------response---------------<br/>
- ------nbres lignes : 45<br/><br/><br/>
+ ------nbres lignes : 45
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -18884,7 +18905,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 69<br/><br/><br/>
+ ------nbres lignes : 69
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -22965,7 +22987,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 66<br/><br/><br/>
+ ------nbres lignes : 66
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -29392,7 +29415,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 98<br/><br/><br/>
+ ------nbres lignes : 98
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -34912,7 +34936,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3645:
 int(1)
 <br/>
- ------nbres lignes : 81<br/><br/><br/>
+ ------nbres lignes : 81
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -38548,7 +38573,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3672:
 int(1)
 <br/>
- ------nbres lignes : 66<br/><br/><br/>
+ ------nbres lignes : 66
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -41290,7 +41316,8 @@ Success !/var/www/html/sms/api/Fonction.php:3689:
 int(1)
 <br/>
 -------------------response---------------<br/>
- ------nbres lignes : 62<br/><br/><br/>
+ ------nbres lignes : 62
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -44847,7 +44874,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3728:
 int(1)
 <br/>
- ------nbres lignes : 77<br/><br/><br/>
+ ------nbres lignes : 77
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -47239,7 +47267,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3741:
 int(1)
 <br/>
- ------nbres lignes : 68<br/><br/><br/>
+ ------nbres lignes : 68
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>
@@ -50987,7 +51016,8 @@ bool(true)
 Success !/var/www/html/sms/api/Fonction.php:3741:
 int(1)
 <br/>
- ------nbres lignes : 89<br/><br/><br/>
+ ------nbres lignes : 89
+<br/><br/><br/>
 
 
  ========== EXECUTION DELIVERY REPORT ======<br/>

@@ -142,39 +142,10 @@ try {
                             ];
 
                             // print "<pre>";
-                            // print_r($tab_messages); 
+                            // print_r($tab_messages);
 
 
                             #send sms
-                            # -- ralentir la diffusion lorsque l'emetteur est INCIDENT MONETIQUE
-                            if($from =='INCIDENT MO'){
-                                
-                                $res_interceptsms = $fct->interceptSMS($from,$to,$text);
-                                // var_dump($res_interceptsms);
-                                if($res_interceptsms){
-
-                                    $delai_sms = $fct->get_delai_sms();
-
-                                    $retourErreur = '0';
-                                    $retourMessage = "from: $from to: $to sms: $text ,,,interceptSMS...";
-                                    // $fct->retour_json_mo($user, $retourErreur, $retourMessage, $retour);
-                                    retour_json_mo($user, $retourErreur, $retourMessage, $retour);
-                                    // sleep($delai_sms*60); # le delai est minutes. je le multiplie par 60 (secondes)
-                                    exit(0);  
-
-                                }else{
-                                    $retourErreur = '0';
-                                    $retourMessage = "from: $from to: $to sms: $text ,,,SEND SMS ...";
-                                    retour_json_mo($user, $retourErreur, $retourMessage, $retour);
-                                    //sleep(3600); // attendre 60 min 
-                                    // sleep(600); // attendre 10 min 
-                                    // sleep(1200); // attendre 20 min 
-                                    // sleep($delai_sms*60); # le delai est minutes. je le multiplie par 60 (secondes)
-                                    // exit(0);  
-                                }
-                            }
-
-
                             $res_send = $fct->sendMultiSMStoMultiDestV4($tab_messages);
 
                             // echo "<pre>";
@@ -389,42 +360,7 @@ function retour_json($user, $retourErreur, $retourMessage, $retour)
     else {
         $myfile = file_put_contents('log/' . $user . '_sendsms_' . $now2->format('Y_m_d') . '.log', $out1 . PHP_EOL, FILE_APPEND | LOCK_EX);
     }
+
+
     exit(0);
 }
-
-
-function retour_json_mo($user, $retourErreur, $retourMessage, $retour)
-{
-    $now2 = new DateTime('NOW', new DateTimeZone(('UTC')));
-
-    header('Content-type: application/json');
-    // echo $message;
-    // var_dump($retour);
-    echo $retour = json_encode([
-        'datexec' => $now2->format('Y-m-d H:i:s'),
-        'user' => $user,
-        'erreur' => $retourErreur,
-        'message' => $retourMessage,
-        'retour' => $retour
-    ]);
-
-
-    //--------------------------------------------------------------
-    $out1 = ob_get_contents();
-    // // var_dump($out1);
-    // $fp = fopen('sendsms.log', 'w');
-    // fwrite($fp, $out1);
-    // fclose($fp);
-
-
-
-    if ($user == null)
-        $myfile = file_put_contents('log/sendsms_' . $now2->format('Y_m_d') . '.log', $out1 . PHP_EOL, FILE_APPEND | LOCK_EX);
-    else {
-        $myfile = file_put_contents('log/' . $user . '_sendsms_' . $now2->format('Y_m_d') . '.log', $out1 . PHP_EOL, FILE_APPEND | LOCK_EX);
-    }
-
-
-    // exit(0);
-}
-

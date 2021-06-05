@@ -18,7 +18,6 @@ class Fonction
     private $my_pdo;
     private $my_tel; // numero utilise par default
     private $base_url;
-    private $delai_sms;
 
 
 
@@ -38,132 +37,11 @@ class Fonction
 
         $this->my_tel = '2250709327626'; // numero utilise par default
 
-        $this->my_pdo = new MyPDO();
 
-        $this->delai_sms = 20; # delai d attente avant d envoyer le sms/ juste pour les INCIDENTS MONETIQUES
+        $this->my_pdo = new MyPDO();
 
         ////print "<br/>\n--------------stop-----------";
     } //construct
-
-
-    /**
-     * get_delai_sms : retourne le delai d attente en minutes
-     */
-    public function get_delai_sms()
-    {
-        return $this->delai_sms;
-    }//get_delai_sms
-
-
-    /**
-     * $from : emetteur du sms
-     * $to : destinataire
-     * $text: le message envoyé
-     * 
-     * desc: recupere le dernier message. s il date moins xx min, on verifie s il est egale au message en cours de
-     * diffusion, si oui attente sinon envoie immediat
-     */
-    public function interceptSMS($from, $to, $text){
-       $delai_ref = $this->get_delai_sms();
-
-        if($from=='INCIDENT MO'){
-            $new_text = substr($text,21);
-            // print"\n<br/> new_text: $new_text \n<br/>";
-
-            $sql = "select o.sendsms_at, substr(o.text,22) sms,
-            TIMEDIFF(  now(), str_to_date(o.sendsms_at,'%Y-%m-%d %H:%i:%s')  ) diff_date,
-            EXTRACT(MINUTE FROM TIMEDIFF(now(),  str_to_date(o.sendsms_at,'%Y-%m-%d %H:%i:%s') )  )  extract_min,
-             o.* 
-            from outgoing o 
-            where  o.a = :tel AND o.de = :de
-            and substr(o.text,22) = :text and date_format(o.sendsms_at,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d') 
-            order by id desc limit 0,1";
-
-            $sql = "select o.sendsms_at, substr(o.text,22) sms,
-            TIMEDIFF(  now(), str_to_date(o.sendsms_at,'%Y-%m-%d %H:%i:%s')  ) diff_date,
-            EXTRACT(MINUTE FROM TIMEDIFF(now(),  str_to_date(o.sendsms_at,'%Y-%m-%d %H:%i:%s') )  )  extract_min,
-             o.* 
-            from outgoing o 
-            where  o.a = :a AND o.de = :de 
-            and date_format(o.sendsms_at,'%Y-%m-%d') = date_format(now(),'%Y-%m-%d') 
-            order by id desc limit 0,1";
-
-            $dbh = $this->my_pdo->getConn();
-            $stmt = $dbh->prepare("$sql");
-            $stmt->execute(
-                [
-                    'a' => $to,
-                    'de' => $from
-                ]
-            );
-            $outgoings = $stmt->fetchAll();
-            // var_dump($outgoings);
-            // var_dump($outgoings[0]['extract_min']);
-
-            if (empty($outgoings)) {
-                return false;
-            }else{
-                $extract_min = intval($outgoings[0]['extract_min']);
-                $sms = ($outgoings[0]['sms']);
-                // var_dump($extract_min);
-
-                if($extract_min >= $delai_ref){
-                    return false;
-                }else{
-                    // ini_set("xdebug.overload_var_dump", "off");
-                    # retourne true ==> ne pas envoyer le sms et patienter quelque miniutes avant l'envoi
-                    // $retourErreur = '0';
-                    // $retourMessage = "from: $from to: $to sms: $text ,,,interceptSMS,,, $new_text # $sms ,,,";
-                    // $user='test';
-                    // $retour=[];
-                    // $this->retour_json_mo($user, $retourErreur, $retourMessage,$retour);
-                    // var_dump($sms);
-                    // var_dump($new_text);
-                    if($sms != $new_text){
-                        return false;
-                    }else{
-                        return true;
-                    }
-
-                }
-            }
-        }
-
-    } //interceptSMS
-
-
-
-    /**
-     * cette fonction n interrompt pas la suite des triatements
-     * juste une notification/log
-     */
-    // function retour_json_mo($user, $retourErreur, $retourMessage, $retour)
-    function retour_json_mo($user, $retourErreur, $retourMessage, $retour)
-    {
-        $now2 = new DateTime('NOW', new DateTimeZone(('UTC')));
-
-        header('Content-type: application/json');
-        // echo $message;
-        // var_dump($retour);
-        echo $retour = json_encode([
-            'datexec' => $now2->format('Y-m-d H:i:s'),
-            'user' => $user,
-            'erreur' => $retourErreur,
-            'message' => $retourMessage,
-            'retour' => $retour
-        ]);
-
-
-        //--------------------------------------------------------------
-        $out1 = ob_get_contents();
-
-        if ($user == null)
-            $myfile = file_put_contents('/var/www/html/sms/api/ws/rest/log/sendsms_' . $now2->format('Y_m_d') . '.log', $out1 . PHP_EOL, FILE_APPEND | LOCK_EX);
-        else {
-            $myfile = file_put_contents('/var/www/html/sms/api/ws/rest/log/' . $user . '_sendsms_' . $now2->format('Y_m_d') . '.log', $out1 . PHP_EOL, FILE_APPEND | LOCK_EX);
-        }
-        exit(0);
-    }//retour_json_mo
 
 
 

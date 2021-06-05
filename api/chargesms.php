@@ -52,22 +52,29 @@ $file_alert_log = $param->files->file_alert_log;
 
 $log_rep = $param->reps->log_rep;
 
+
+
 $file_lock_charge_sms = $param->files->file_lock_charge_sms;
 $file_lock_charge_sms = $log_rep . $file_lock_charge_sms;
-
-
-
-// D'autres manières d'appeler error_log():
-#error_log("TEST !", 3, $log_rep . $file_alert_log);
-
-
-
-
-
 if (file_exists($file_lock_charge_sms)) {
-    print("<br/>\n exit! traitement encours...$file_lock_charge_sms");
+    print("<br/>\n exit! chargement des sms encours...$file_lock_charge_sms");
     exit(0);
-}
+} 
+// else {
+//     $myfile = fopen("$file_lock_charge_sms", "w");
+// }
+
+
+$file_lock_charge_abonne = $param->files->file_lock_charge_abonne;
+$file_lock_charge_abonne = $log_rep . $file_lock_charge_abonne;
+if (file_exists($file_lock_charge_abonne)) {
+    unlink($file_lock_charge_sms);
+    exit("<br/>\n exit! chargement des abonnes encours...");
+} 
+// else {
+//     $myfile = fopen("$file_lock_charge_abonne", "w");
+// }
+
 
 
 # verifier s il y a des abonnés
@@ -81,7 +88,8 @@ print "\n<br/> number_of_rows: $number_of_rows";
 
 if ($number_of_rows == '0') {
     $res_send = $fct->sendSMS($fct->getMyTel(), "Erreur chargesms.php:  $number_of_rows abonnes. Table abonnement vide");
-    $myfile = fopen("$file_lock_charge_sms", "w");
+    // $myfile = fopen("$file_lock_charge_sms", "w"); //koufide 01052021 0944 correction erreur chargement
+    unlink($file_lock_charge_sms);  // ++++ ajoute
     exit(0);
 }
 
