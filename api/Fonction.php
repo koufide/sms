@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
-require_once('MyPDO.php'); 
+require_once('MyPDO.php');
 // $pdo = new MyPDO();
 
 require_once 'MessageDigestPasswordEncoder.php';
@@ -52,7 +52,7 @@ class Fonction
     public function get_delai_sms()
     {
         return $this->delai_sms;
-    }//get_delai_sms
+    } //get_delai_sms
 
 
     /**
@@ -63,11 +63,12 @@ class Fonction
      * desc: recupere le dernier message. s il date moins xx min, on verifie s il est egale au message en cours de
      * diffusion, si oui attente sinon envoie immediat
      */
-    public function interceptSMS($from, $to, $text){
-       $delai_ref = $this->get_delai_sms();
+    public function interceptSMS($from, $to, $text)
+    {
+        $delai_ref = $this->get_delai_sms();
 
-        if($from=='INCIDENT MO'){
-            $new_text = substr($text,21);
+        if ($from == 'INCIDENT MO') {
+            $new_text = substr($text, 21);
             // print"\n<br/> new_text: $new_text \n<br/>";
 
             $sql = "select o.sendsms_at, substr(o.text,22) sms,
@@ -102,14 +103,14 @@ class Fonction
 
             if (empty($outgoings)) {
                 return false;
-            }else{
+            } else {
                 $extract_min = intval($outgoings[0]['extract_min']);
                 $sms = ($outgoings[0]['sms']);
                 // var_dump($extract_min);
 
-                if($extract_min >= $delai_ref){
+                if ($extract_min >= $delai_ref) {
                     return false;
-                }else{
+                } else {
                     // ini_set("xdebug.overload_var_dump", "off");
                     # retourne true ==> ne pas envoyer le sms et patienter quelque miniutes avant l'envoi
                     // $retourErreur = '0';
@@ -119,16 +120,14 @@ class Fonction
                     // $this->retour_json_mo($user, $retourErreur, $retourMessage,$retour);
                     // var_dump($sms);
                     // var_dump($new_text);
-                    if($sms != $new_text){
+                    if ($sms != $new_text) {
                         return false;
-                    }else{
+                    } else {
                         return true;
                     }
-
                 }
             }
         }
-
     } //interceptSMS
 
 
@@ -163,7 +162,7 @@ class Fonction
             $myfile = file_put_contents('/var/www/html/sms/api/ws/rest/log/' . $user . '_sendsms_' . $now2->format('Y_m_d') . '.log', $out1 . PHP_EOL, FILE_APPEND | LOCK_EX);
         }
         exit(0);
-    }//retour_json_mo
+    } //retour_json_mo
 
 
 
@@ -292,6 +291,25 @@ class Fonction
 
         // exit("quiiter");
     } //flooding
+
+
+    /**
+     * @param $sql la requete
+     * @param $params les parametres à passer
+     * @return $count retourne le nombre d enregistrement
+     */
+    public function checkDoublon($sql, $params)
+    {
+        $dbh = $this->my_pdo->getConn();
+        $stmt = $dbh->prepare("$sql");
+        $stmt->execute(
+            $params
+        );
+
+        $count = $stmt->rowCount();
+        return $count;
+    } //checkDoublon
+
 
 
     /**
@@ -932,10 +950,9 @@ class Fonction
             //https://dev.infobip.com/send-sms/single-sms-message#section-smsresponsedetails
 
             return $retour;
-
         } else {
 
-            if($retour_json){
+            if ($retour_json) {
                 # koufide 05122020
                 # NB : il y a un exit apres le retour. donc le programme s'arrete
                 # mettre retour_json à false pour eviter cela
@@ -944,7 +961,6 @@ class Fonction
                 $retourTab = [];
                 $this->retour_json($retourErreur, $retourMessage, $retourTab, $fichier = null, $content = null);
             }
-
         } // if (empty($outgoings)) {
 
 
@@ -2772,6 +2788,321 @@ VALUES(:de , :a , :text , :message_id , :status_sendsms , :sendsms_at , :letest 
 
 
 
+
+    public function sendMultiSMStoMultiDestV6($tab_messages, $applic)
+    {
+        $now = new DateTime('NOW', new DateTimeZone(('UTC')));
+
+        $json = json_encode($tab_messages);
+        //exit("<br/>\n-------fik------ : ");
+
+        $url =  $this->base_url . '/sms/2/text/advanced';
+        // $url =  "https://g3lq8.api.infobip.com/sms/2/text/advanced";
+
+        //$message = uniqid();
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => "$url",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            // CURLOPT_POSTFIELDS => "{ \"from\":\"InfoSMS\", \"to\":\"22503612783\", \"text\":\"Test SMS.\" }",
+            CURLOPT_POSTFIELDS => "$json",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/json",
+                // "authorization: Basic " . base64_encode("$user:$pass"),
+                "authorization: Basic " . base64_encode("$this->user:$this->pass"),
+                "content-type: application/json"
+            ),
+        ));
+
+
+
+
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        var_dump($response);
+        var_dump($err);
+        //exit("<br/>\n-------fik3------ : ");
+
+
+        curl_close($curl);
+
+        // $retour;
+        if ($err) {
+            $res_send = $err;
+        } else {
+            $res_send = $response;
+
+            print("<br/>\n----responses -tab_messages----");
+
+
+
+            print "<pre>";
+            // var_dump($res_send);
+            print_r($res_send);
+
+
+            $dbh = $this->my_pdo->getConn();
+            //-----------------------------------------------------
+            # inserer la requête
+
+            // print_r($tab_message);
+
+            foreach ($tab_messages['messages'] as $tab_message) {
+                $aller = [];
+                $aller['bulkId'] = $tab_messages['bulkId'];
+                $aller['from'] = $tab_message['from'];
+
+                // var_dump($tab_message['destinations']);
+                // print_r($tab_message['destinations']);
+
+                $destinations = $tab_message['destinations'];
+
+                // var_dump($destinations);
+                // print_r($destinations);
+
+                // foreach ($tab_message['destinations'] as $destinations) {
+                $aller['to'] = $destinations['to'];
+                $aller['messageId'] = $destinations['messageId'];
+                // } //foreach($t_message['destinations'] as $destinations){
+                $aller['text'] = $tab_message['text'];
+                $aller['tentative'] = 0;
+                $aller['applic'] = $applic;
+                $aller['letest'] = $aller['messageId'];
+                $aller['sendsms_at'] =  $now->format('Y-m-d H:i:s');
+                $aller['status_sendsms'] =  $tab_messages['bulkId'];
+
+                # inserer la requete
+                $sql = "INSERT INTO outgoing(de, a, text, message_id,  sendsms_at, letest,  bulk_id, tentative, applic, status_sendsms)
+                    VALUES(:from , :to , :text , :messageId  , :sendsms_at , :letest , :bulkId, :tentative, :applic, :status_sendsms)
+                    ";
+
+                $stmt = $dbh->prepare($sql);
+                //print_r($sql);
+                //var_dump($data2);
+                $res = $stmt->execute($aller);
+
+                $count = $stmt->rowCount();
+                // print "<br/>\n insert count: $count";
+                // print "<br/>\n insert count: $count";
+                // var_dump("insert : $count");
+
+                if ($count == '0') {
+                    $retourErreur = '1';
+                    $retourMessage = 'Echec [insert] outgoing';
+                    //retour_json($retourErreur, $retourMessage, $retour);
+                } else {
+                    $retourErreur = '0';
+                    $retourMessage = '';
+                    //retour_json($retourErreur, $retourMessage, $retour);
+
+
+
+
+                    //========================================================
+                    //FAIRE LA MAJ DANS LA TABLE F_CHARGEMEMENT
+                    //--VERIFIER SI LE MESSAGE PROVIENT DE LA TABLE CHARGEMENT
+                    // $sql = "select * from f_chargesms
+                    // where date_format(datecharge,'%d/%m/%Y') = date_format(NOW(),'%d/%m/%Y') 
+                    // and tel=:tel 
+                    // and message=:message";
+
+                    // $params = [
+                    //     'tel' => $destinations['to'],
+                    //     'message' => $tab_message['text']
+                    // ];
+
+                    // $res_doublon = $this->checkDoublon($sql, $params);
+                    // print "<br/>\n  res_doublon:   $res_doublon";
+
+                    # ------------- MAJ F_CHARGESMS 
+                    $sql = "UPDATE f_chargesms SET traite = :traite WHERE traite='0' AND tel = :tel and message = :message and date_format(datecharge,'%d/%m/%Y') = date_format(NOW(),'%d/%m/%Y') ";
+
+                    $stmt = $dbh->prepare($sql);
+
+                    $data = [];
+                    #// 3 - doublon     /2- client sans abonnement  //1- envoyer
+                    $data['traite'] = '1';
+                    $data['tel'] = $destinations['to'];
+                    $data['message'] = trim($tab_message['text']);
+
+                    try {
+                        $res_update = $stmt->execute($data);
+                        var_dump($res_update);
+                        $count = $stmt->rowCount();
+
+                        if ($count == '0') {
+                            echo "Failed update f_chargesms !";
+                        } else {
+                            echo "Success update f_chargesms!";
+                        }
+                        // var_dump($count);
+                    } catch (\Throwable $th) {
+                        // $fct->returnError(null, $th->getFile() . ' ' . $th->getLine() . ' ' . $th->getMessage());
+                        print_r($th);
+                    }
+                } //if ($count == '0') {
+
+
+
+
+
+
+                // } // foreach($tab_message['messages'] as  $t_message)
+
+            } // foreach($tab_messages as $tab_message){
+
+
+
+            //-----------------------------------------------------
+            //--------TRAITEMENT DE LA REPONSE----------------------
+            //-----------------------------------------------------
+            $tab_message = json_decode($response, true);
+            print "<pre>";
+            // var_dump($tab_message);
+            print_r($tab_message);
+
+            $retour = [];
+            // $retour['bulkId'] = $tab_message['bulkId'];
+
+            foreach ($tab_message['messages'] as $messages) {
+
+                // print "<pre>";
+                // var_dump($messages);
+                // print_r($messages);
+
+                $retour['to'] = $messages['to'];
+                // print "<pre>";
+                // var_dump($retour['to']);
+                // print_r($retour['to']);
+
+                $retour['send_groupid'] = $messages['status']['groupId'];
+                $retour['send_groupname'] = $messages['status']['groupName'];
+                $retour['send_id'] = $messages['status']['id'];
+                $retour['send_name'] = $messages['status']['name'];
+                $retour['send_description'] = $messages['status']['description'];
+                $retour['message_id'] = $messages['messageId'];
+
+
+                $colonnes = "
+                    send_groupid = :send_groupid,
+                    send_groupname = :send_groupname,
+                    send_id = :send_id,
+                    send_name = :send_name,
+                   send_description = :send_description,
+                    message_id = :message_id
+                ";
+                // print "colonnes : $colonnes";
+                // var_dump($retour);
+
+
+                # enregistrer le statut de la requete
+                $sql =  "update outgoing set $colonnes where message_id = :message_id ";
+                // print($sql);
+                $stmt = $dbh->prepare($sql);
+                try {
+                    $res_update = $stmt->execute($retour);
+                    // var_dump($res_update);
+                    $count = $stmt->rowCount();
+                    // print("<br/>\n update count " . $count);
+
+                    if ($count == '0') {
+                        $retourErreur = '1';
+                        $retourMessage =  'Echec [update] outgoing';
+                        // retour_json($retourErreur, $retourMessage, $retour);
+                    } else {
+
+                        $retourErreur = '0';
+                        $retourMessage = '';
+                        // retour_json($retourErreur, $retourMessage, $retour);
+                    }
+                    //code...
+                } catch (\Throwable $th) {
+                    print_r($th);
+                }
+
+
+                //------------------------------------------------
+                # recuperer l'abonnement et faire la mise à jour dans la table chargesms , mettre traite à 1
+                //$sql = "select a.compte from abonnement a where a.phone= :phone";
+                $sql = "select a.compte FROM chargesms s , abonnement a  where s.traite=0 and s.compte = a.compte  and a.phone= :phone;";
+                // var_dump($sql);
+                print "<br/>\n<br/>\n phone => " . $retour['to'];
+                $stmt = $dbh->prepare($sql);
+
+                try {
+                    $stmt->execute(['phone' => $retour['to']]);
+                } catch (\Throwable $th) {
+                    $this->returnError(null, $th->getFile() . ' ' . $th->getLine() . ' ' . $th->getMessage());
+                }
+                $abonnement = $stmt->fetch();
+                // var_dump($abonnement);
+
+
+                $colonnes = "traite = :traite, datetrt = :datetrt ";
+
+                $data = [
+                    'compte' => $abonnement['compte'],
+                    'traite' => '1',
+                    'datetrt' => $now->format('Y/m/d H:i:s')
+                ];
+
+                $conditions = "compte = :compte";
+
+                $sql = "update chargesms set $colonnes where $conditions ";
+                // var_dump($sql);
+                // print "<br/>\n compte => " . $abonnement['compte'];
+
+                // print "<br/>\n <pre>";
+                // print_r($colonnes);
+                // print_r($conditions);
+                // print_r($data);
+
+                $stmt = $dbh->prepare($sql);
+                try {
+                    $res_update = $stmt->execute($data);
+                    // var_dump($res_update);
+                    $count = $stmt->rowCount();
+
+                    if ($count == '0') {
+                        echo "Failed !";
+                    } else {
+                        echo "Success !";
+                    }
+                    // var_dump($count);
+                    print "$count <br/>\n";
+                } catch (\Throwable $th) {
+                    $this->returnError(null, $th->getFile() . ' ' . $th->getLine() . ' ' . $th->getMessage());
+                }
+                //-----------------------------
+
+
+
+            } //foreach ($tab_message['messages'] as $messages) {
+
+
+
+
+            //-----------------------------------------------------
+        }
+
+        # fik var_dump($res_send);
+        return $res_send;
+    } //sendMultiSMStoMultiDestV6
+
+
+
+
+
     public function sendMultiSMStoMultiDestV5_test($tab_messages, $applic, $url = null)
     {
         $now = new DateTime('NOW', new DateTimeZone(('UTC')));
@@ -4361,16 +4692,33 @@ VALUES(:de , :a , :text , :message_id , :status_sendsms , :sendsms_at , :letest 
         //https://fr.wikipedia.org/wiki/Aide:Liste_de_caract%C3%A8res_sp%C3%A9ciaux
         $trans = array(
             "à" => "a", "â" => "a", "ç" => "c", "è" => "e", "é" => "e", "ê" => "e", "ô" => "o", "ù" => "u", "û" => "u",
-            "À" => "A", "Â" => "A", "Ã" => "A", "Ç" => "C", "È" => "E", "É" => "E", "Ê" => "E", "Ô" => "O", "Ù" => "U", "Û" => "U"
-        );  
+            "À" => "A", "Â" => "A", "Ã" => "A", "Ç" => "C", "È" => "E", "É" => "E", "Ê" => "E", "Ô" => "O", "Ù" => "U", "Û" => "U",
+            "î" => "i", "ï" => "i", "Î" => "I", "Ï" => "I"
+        );
         $name = strtr($name, $trans);
+
+        $name = $this->enleveaccents($name);
 
         // $name = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $name);
 
 
         return $name;
     } //replaceSpecialChar
-    
+
+
+    function enleveaccents($chaine)
+    {
+        $string = strtr(
+            $chaine,
+
+            "ÀÁÂàÄÅàáâàäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏ" .
+                "ìíîïÙÚÛÜùúûüÿÑñ",
+            "aaaaaaaaaaaaooooooooooooeeeeeeeecciiiiiiiiuuuuuuuuynn"
+        );
+
+        return $string;
+    }
+
 
 
     public function supprimerRetourChariot($name)

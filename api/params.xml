@@ -82,14 +82,19 @@
         <!-- <file_abonnesms>bridgesms_prod_abonne.txt</file_abonnesms> -->
         <file_abonnesms>SMS_ABONNE_DESABONNE_</file_abonnesms>
         <file_lock_push_sms>lock_push_sms.run</file_lock_push_sms>
+        <file_lock_fpush_sms>lock_fpush_sms.run</file_lock_fpush_sms>
         <file_lock_mpush_sms>lock_mpush_sms.run</file_lock_mpush_sms>
         <file_lock_mpush_sms2>lock_mpush_sms2.run</file_lock_mpush_sms2>
         <file_lock_mpush_sms3>lock_mpush_sms3.run</file_lock_mpush_sms3>
         <file_lock_mpush_sms4>lock_mpush_sms4.run</file_lock_mpush_sms4>
+        <file_lock_mpush_sms5>lock_mpush_sms5.run</file_lock_mpush_sms5>
+        <file_lock_mpush_sms6>lock_mpush_sms6.run</file_lock_mpush_sms6>
         <file_lock_dpush_sms>lock_dpush_sms.run</file_lock_dpush_sms>
         <file_lock_charge_sms>lock_charge_sms.run</file_lock_charge_sms>
+        <file_lock_fcharge_sms>lock_fcharge_sms.run</file_lock_fcharge_sms>
         <file_lock_charge_abonne>lock_charge_abonne.run</file_lock_charge_abonne>
         <file_alert_log>alert.log</file_alert_log>
+        <file_falert_log>falert.log</file_falert_log>
         <file_createuti_log>createuti.log</file_createuti_log>
     </files>
     <messages>
